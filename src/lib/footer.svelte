@@ -11,7 +11,7 @@
 		<span>Experience</span>
 		<span class=" text-offWhite text-[3vmin]">v</span>
 	</a>
-	<a href="/prj" class=" flex flex-col justify-center place-items-center">
+	<a href="/proj" class=" flex flex-col justify-center place-items-center">
 		<span>Projects</span>
 		<span class=" text-offWhite text-[3vmin]">v</span>
 	</a>

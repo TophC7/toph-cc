@@ -28,7 +28,9 @@
   "type": "module",
   "dependencies": {
     "@fontsource/fira-mono": "^4.5.0",
+    "@fortawesome/free-solid-svg-icons": "^6.1.1",
     "@lukeed/uuid": "^2.0.0",
-    "cookie": "^0.4.1"
+    "cookie": "^0.4.1",
+    "svelte-fa": "^2.4.0"
   }
 }
