@@ -1,4 +1,4 @@
-<nav class=" flex mb-14 justify-between font-Inter font-semibold text-accent text-4xl ">
+<nav class=" flex mb-14 justify-between font-Inter font-semibold text-accent text-[4vmin] ">
 	<a href="/" class=" flex flex-col justify-center place-items-center">
 		<span>Home</span>
 		<span class=" text-offWhite">v</span>

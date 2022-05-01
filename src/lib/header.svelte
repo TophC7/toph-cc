@@ -8,7 +8,7 @@
 	});
 </script>
 
-<p class=" font-Inter text-offWhite font-semibold text-7xl my-14">
+<p class=" font-Inter text-offWhite font-semibold text-[7vmin] my-14">
 	ChrisToph<span class=" text-accent">@</span>{pageValue}:
 	<span class=" text-accent">~</span> <span class=" animate-pulse text-complementary">_</span>
 </p>

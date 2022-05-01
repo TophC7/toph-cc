@@ -3,13 +3,13 @@
 	import UPR from '../lib/ascii/upr.svelte';
 	import { page } from '../lib/stores';
 
-	page.set('Education');
+	page.set('Edu');
 </script>
 
 <div class="flex flex-col gap-14">
 	<section class=" flex gap-14">
 		<UPR />
-		<p class=" font-Inter font-semibold text-2xl text-accent">
+		<p class=" font-Inter font-semibold text-[2vmin] text-accent">
 			University of Puerto Rico, Mayagüez <br />
 			- - - - - - - - - - - - <br />
 			Date: <span class=" font-normal text-offWhite">August 2017 - December 2021</span> <br />
@@ -19,7 +19,7 @@
 		</p>
 	</section>
 	<section class=" flex gap-14">
-		<p class=" font-Inter font-semibold text-2xl text-accent">
+		<p class=" font-Inter font-semibold text-[2vmin] text-accent">
 			University of Regina, Saskatchewan <br />
 			- - - - - - - - - - - - <br />
 			Exchange Year: <span class=" font-normal text-offWhite"> August 2018 - May 2019</span> <br />

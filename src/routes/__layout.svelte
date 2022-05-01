@@ -5,7 +5,7 @@
 </script>
 
 <div class=" bg-background w-screen h-screen ">
-	<div class="flex flex-col w-[60rem] h-full mx-auto">
+	<div class="flex flex-col w-[80vw] h-full mx-auto max-w-[80vw]">
 		<Header />
 		<main class=" h-full">
 			<slot />
