@@ -1,5 +1,5 @@
 <script>
-	import '../app.pcss';
+	import '../app.css';
 </script>
 
 <div class=" bg-background w-screen h-screen ">
