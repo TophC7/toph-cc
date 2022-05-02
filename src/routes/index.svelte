@@ -9,7 +9,7 @@
 	<title>Chris Toph</title>
 	<meta name="description" content="Personal Portfolio" />
 	<meta name="author" content="Chris Toph @tophc7" />
-	<meta property="og:image" content="../favicon.png" />
+	<meta property="og:image" content="https://toph.cc/favicon.png" />
 </svelte:head>
 
 <p class=" text-offWhite text-[4vmin] font-semibold">
