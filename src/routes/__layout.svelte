@@ -5,6 +5,13 @@
 	import InfoIcon from '../../static/infoIcon.svelte';
 </script>
 
+<!-- INFO:: a weird space shows up if u zoom out on mobile lol -->
+<div class=" fixed h-screen w-screen -z-10 bg-accent">
+	<p class=" flex w-full font-Inter font-semibold text-[2vmin] fixed bottom-0 justify-center place-items-center">
+		{'ignore this space <3'}
+	</p>
+</div>
+
 <div class=" bg-background w-full h-full">
 	<a href="/info">
 		<div name="triangle" id="triangle" class=" triangle-t-r" />
@@ -20,11 +27,6 @@
 		</main>
 		<Footer />
 	</div>
-
-	<!-- INFO:: a weird space shows up if u zoom out on mobile lol -->
-	<p class=" flex w-full font-Inter font-semibold text-[2vmin] fixed -bottom-10 justify-center place-items-center">
-		{'ignore this space <3'}
-	</p>
 </div>
 
 <style>
