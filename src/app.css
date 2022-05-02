@@ -9,3 +9,8 @@
         @apply border-solid border-b-accent border-b-[3rem] border-x-transparent border-x-[3rem] border-t-0 fixed -top-2 -right-8 rotate-45
     }
 }
+
+html, body{
+    min-height: 100% !important;
+    height: 100%;
+}

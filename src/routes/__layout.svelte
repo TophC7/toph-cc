@@ -3,14 +3,9 @@
 	import Header from '../lib/header.svelte';
 	import Footer from '../lib/footer.svelte';
 	import InfoIcon from '../../static/infoIcon.svelte';
-	import { onMount } from 'svelte';
-
-	onMount(async () => {
-		document.body.requestFullscreen(hide);
-	});
 </script>
 
-<div class=" bg-background w-[100vw] h-[100vh] ">
+<div class=" bg-background w-full h-full">
 	<a href="/info">
 		<div name="triangle" id="triangle" class=" triangle-t-r" />
 		<span class=" w-5 h-5 fixed top-[.5rem] right-1">
