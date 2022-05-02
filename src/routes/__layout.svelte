@@ -3,13 +3,14 @@
 	import Header from '../lib/header.svelte';
 	import Footer from '../lib/footer.svelte';
 	import InfoIcon from '../../static/infoIcon.svelte';
+	import Croissant from '../../static/croissant.svelte';
 </script>
 
 <!-- INFO:: a weird space shows up if u zoom out on mobile lol -->
-<div class=" fixed h-screen w-screen -z-10 bg-accent">
-	<p class=" flex w-full font-Inter font-semibold text-[2vmin] fixed bottom-0 justify-center place-items-center">
-		{'ignore this space <3'}
-	</p>
+<div class=" fixed h-screen w-screen -z-10 bg-background">
+	<i class=" hover:animate-spin flex w-full h-[6vmin] fixed bottom-4 justify-center place-items-center">
+		<Croissant color="#53D7DF" opacity=".5" />
+	</i>
 </div>
 
 <div class=" bg-background w-full h-full">
