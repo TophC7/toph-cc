@@ -3,6 +3,11 @@
 	import Header from '../lib/header.svelte';
 	import Footer from '../lib/footer.svelte';
 	import InfoIcon from '../../static/infoIcon.svelte';
+	import { onMount } from 'svelte';
+
+	onMount(async () => {
+		document.body.requestFullscreen(hide);
+	});
 </script>
 
 <div class=" bg-background w-[100vw] h-[100vh] ">
