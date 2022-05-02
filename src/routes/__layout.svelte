@@ -8,7 +8,7 @@
 
 <!-- INFO:: a weird space shows up if u zoom out on mobile lol -->
 <div class=" fixed h-screen w-screen -z-10 bg-background">
-	<i class=" hover:animate-spin flex w-full h-[6vmin] fixed bottom-4 justify-center place-items-center">
+	<i class=" hover:animate-spin flex w-full h-[6vmin] fixed bottom-6 justify-center place-items-center">
 		<Croissant color="#53D7DF" opacity=".5" />
 	</i>
 </div>
