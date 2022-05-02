@@ -5,7 +5,7 @@
 	import InfoIcon from '../../static/infoIcon.svelte';
 </script>
 
-<div class=" bg-background w-screen h-screen ">
+<div class=" bg-background w-[100vw] h-[100vh] ">
 	<a href="/info">
 		<div name="triangle" id="triangle" class=" triangle-t-r" />
 		<span class=" w-5 h-5 fixed top-[.5rem] right-1">
