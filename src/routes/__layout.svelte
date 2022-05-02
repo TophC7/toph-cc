@@ -20,6 +20,11 @@
 		</main>
 		<Footer />
 	</div>
+
+	<!-- INFO:: a weird space shows up if u zoom out on mobile lol -->
+	<p class=" flex w-full font-Inter font-semibold text-[2vmin] fixed -bottom-10 justify-center place-items-center">
+		{'ignore this space <3'}
+	</p>
 </div>
 
 <style>
