@@ -13,9 +13,9 @@
 		</span>
 	</a>
 
-	<div class="flex flex-col w-[80vw] h-full mx-auto max-w-[80vw] gap-14 py-14">
+	<div class="flex flex-col w-[80vw] h-full mx-auto max-w-[80rem] gap-14 py-14">
 		<Header />
-		<main class=" h-full">
+		<main class=" h-full overflow-auto">
 			<slot />
 		</main>
 		<Footer />

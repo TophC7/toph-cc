@@ -1,18 +1,78 @@
-<nav class=" flex justify-between font-Inter font-semibold text-accent text-[4vmin]" style=" line-height: 4vmin">
-	<a href="/" class=" flex flex-col justify-center place-items-center">
+<!-- INFO: styled with css because tailwind simply wouldnt let me do this correctly -->
+
+<nav name=" navigation " class=" ">
+	<a href="/" name=" home " class=" home ">
 		<span>Home</span>
-		<span class=" text-offWhite text-[3vmin]">v</span>
+		<span class=" arrow ">‹</span>
 	</a>
-	<a href="/edu" class=" flex flex-col justify-center place-items-center">
+	<a href="/edu" name=" education " class=" education ">
 		<span>Education</span>
-		<span class=" text-offWhite text-[3vmin]">v</span>
+		<span class=" arrow ">‹</span>
 	</a>
-	<a href="/exp" class=" flex flex-col justify-center place-items-center">
+	<a href="/exp" name=" experience " class=" experience ">
 		<span>Experience</span>
-		<span class=" text-offWhite text-[3vmin]">v</span>
+		<span class=" arrow ">‹</span>
 	</a>
-	<a href="/proj" class=" flex flex-col justify-center place-items-center">
+	<a href="/proj" name=" projects " class=" projects ">
 		<span>Projects</span>
-		<span class=" text-offWhite text-[3vmin]">v</span>
+		<span class=" arrow ">‹</span>
 	</a>
 </nav>
+
+<style>
+	nav {
+		/* --background: #1a1a1a; */
+		--accent: #df5b53;
+		/* --complementary: #53d7df; */
+		--offWhite: #e5e4e7;
+
+		display: flex;
+		justify-content: space-between;
+		font-family: 'Inter';
+		font-weight: 600;
+		color: var(--accent);
+		font-size: 4vmin;
+		line-height: 4vmin;
+	}
+
+	a {
+		display: flex;
+		flex-direction: column;
+		place-items: center;
+	}
+
+	.arrow {
+		color: var(--offWhite);
+		font-size: 4vmin;
+		line-height: 4vmin;
+		transform: rotate(270deg);
+	}
+
+	@media only screen and (max-width: 1024px) {
+		nav {
+			display: grid;
+			grid-template-columns: repeat(2, minmax(0, 1fr));
+			grid-template-rows: repeat(2, minmax(0, 1fr));
+			gap: 1vmin;
+
+			font-family: 'Inter';
+			font-weight: 600;
+			font-size: 5vmin;
+			line-height: 5vmin;
+			color: var(--offWhite);
+		}
+
+		a {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			place-items: center;
+			background: var(--accent);
+			height: 12vmin;
+		}
+
+		.arrow {
+			display: none;
+		}
+	}
+</style>

@@ -8,7 +8,14 @@
 	});
 </script>
 
-<p class=" font-Inter text-offWhite font-semibold text-[7vmin]">
-	ChrisToph<span class=" text-accent">@</span>{pageValue}:
-	<span class=" text-accent">~</span> <span class=" animate-pulse text-complementary">_</span>
-</p>
+<div class=" flex flex-col lg:flex-row font-Inter text-offWhite font-semibold ">
+	<div class=" lg:text-[7.4vmin] text-[10vmin]">
+		Chris<span class=" lg:hidden">{' '}</span>Toph
+		<span class="text-complementary lg:hidden">{'›'}</span>
+	</div>
+
+	<div class=" text-[7.4vmin]">
+		<span class=" text-accent">@</span>{pageValue}:
+		<span class=" text-accent">~</span> <span class=" animate-pulse text-complementary">_</span>
+	</div>
+</div>
