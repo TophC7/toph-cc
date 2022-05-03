@@ -45,12 +45,27 @@
 		</div>
 		<span id="outside"> <UOFR /> </span>
 	</section>
+
+	<section name="cert" class=" lg:flex font-Inter font-semibold text-[4vmin] lg:text-[2.5vmin] text-accent">
+		<div>
+			<div class=" flex gap-4">
+				<div class=" flex flex-col justify-between">
+					Certifications in progress <br />
+					<div>- - - - - - - - - - - - - - - - -</div>
+				</div>
+			</div>
+			Google IT Support Certification:&nbsp;<span class=" font-normal text-offWhite"> Expected date of completion June 2022</span> <br />
+			CompTIA A+ Certification: <span class=" font-normal text-offWhite"> Expected date of completion July 2022</span> <br />
+		</div>
+	</section>
 </div>
 
 <style>
-	/* WHY: tailwind once again is horrible dealing with @media. This hides or shows the correct uni logo depending in the screen*/
+	/* INFO: This hides or shows the correct uni logo depending in the screen */
+	/* WHY: tailwind once again is horrible dealing with @media*/
 	#outside {
 		display: none;
+		margin-left: auto;
 	}
 	@media only screen and (min-width: 1024px) {
 		#inside {
