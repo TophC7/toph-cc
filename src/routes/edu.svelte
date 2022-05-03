@@ -7,10 +7,13 @@
 </script>
 
 <div class="flex flex-col gap-14">
-	<section class=" lg:flex font-Inter font-semibold text-[4vmin] lg:text-[2.5vmin] text-accent">
+	<!-- WHO: UPRM section -->
+	<section name="UPRM" class=" lg:flex font-Inter font-semibold text-[4vmin] lg:text-[2.5vmin] text-accent">
 		<div>
+			<!-- ^^ wrapping div to keep content togheter otherwise outside logo and text wont flex correctly -->
 			<div class=" flex gap-4 justify-between align-bottom">
 				<span id="inside" class=" pb-4"> <UPR /> </span>
+				<!-- ^^ ascii logo for mobile-->
 				<div class=" flex flex-col justify-between">
 					University of Puerto Rico, Mayagüez <br />
 					<div>- - - - - - - - - - - - - - - - -</div>
@@ -23,8 +26,11 @@
 			GPA: <span class=" font-normal text-offWhite">3.45 wtih 88 completed credits</span> <br />
 		</div>
 		<span id="outside"> <UPR /> </span>
+		<!-- ^^ ascii logo for desktop -->
 	</section>
-	<section class=" lg:flex font-Inter font-semibold text-[4vmin] lg:text-[2.5vmin] text-accent">
+
+	<!-- WHO: UOFR section -->
+	<section name="UFOR" class=" lg:flex font-Inter font-semibold text-[4vmin] lg:text-[2.5vmin] text-accent">
 		<div>
 			<div class=" flex gap-4 justify-between align-bottom">
 				<span id="inside" class=" pb-4"> <UOFR /> </span>
@@ -42,6 +48,7 @@
 </div>
 
 <style>
+	/* WHY: tailwind once again is horrible dealing with @media. This hides or shows the correct uni logo depending in the screen*/
 	#outside {
 		display: none;
 	}

@@ -1,18 +1,22 @@
-<!-- INFO: styled with css because tailwind simply wouldnt let me do this correctly -->
-
 <nav name=" navigation " class=" ">
+	<!-- WHO: Home -->
 	<a href="/" name=" home " class=" home ">
 		<span>Home</span>
 		<span class=" arrow ">‹</span>
 	</a>
+
+	<!-- WHO: Education -->
 	<a href="/edu" name=" education " class=" education ">
 		<span>Education</span>
 		<span class=" arrow ">‹</span>
 	</a>
+
+	<!-- WHO: Experience -->
 	<a href="/exp" name=" experience " class=" experience ">
 		<span>Experience</span>
 		<span class=" arrow ">‹</span>
 	</a>
+	<!-- WHO: Projects -->
 	<a href="/proj" name=" projects " class=" projects ">
 		<span>Projects</span>
 		<span class=" arrow ">‹</span>
@@ -20,6 +24,9 @@
 </nav>
 
 <style>
+	/* INFO: switches footer styling according to screen */
+	/* WHY: css was simply faster and easier to implement this than tailwind and actually readable */
+	/* TODO: switch to mobile first logic */
 	nav {
 		/* --background: #1a1a1a; */
 		--accent: #df5b53;
