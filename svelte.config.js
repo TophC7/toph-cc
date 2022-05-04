@@ -1,4 +1,5 @@
 import adapter from '@sveltejs/adapter-auto';
+import path from "path";
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
@@ -16,6 +17,11 @@ const config = {
 					allow: ['./static/']
 				}
 			},
+			resolve: {
+				alias: {
+					$static: path.resolve("./static")
+				}
+			}
 		}
 	}
 };
