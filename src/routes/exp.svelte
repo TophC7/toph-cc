@@ -10,7 +10,7 @@
 		<div>
 			<!-- ^^ wrapping div -->
 			<div class=" flex gap-4">
-				<span id="inside" class=" flex justify-center place-items-center"> <img src="static/svg/puter.svg" class="w-[20vmin]" alt="old pc icon" /> </span>
+				<span id="inside" class=" flex justify-center place-items-center"> <img src="svg/puter.svg" class="w-[20vmin]" alt="old pc icon" /> </span>
 				<!-- ^^ ascii logo for mobile-->
 				<div class=" flex flex-col justify-between">
 					IT Technician & Clerk
@@ -29,7 +29,7 @@
 				provided any assistance they required. Created promotional emails, flyers, etc. for use in the company's sales and events.
 			</span>
 		</div>
-		<div id="outside" class="w-full max-w-max"><img src="static/svg/puter.svg" class="w-[10vmin]" alt="old pc icon" /></div>
+		<div id="outside" class="w-full max-w-max"><img src="svg/puter.svg" class="w-[10vmin]" alt="old pc icon" /></div>
 		<!-- ^^ ascii logo for desktop -->
 	</section>
 
@@ -38,7 +38,7 @@
 		<div>
 			<!-- ^^ wrapping div -->
 			<div class=" flex gap-4">
-				<span id="inside" class=" flex justify-center place-items-center"> <img src="static/svg/drone.svg" class="w-[20vmin]" alt="drone icon" /> </span>
+				<span id="inside" class=" flex justify-center place-items-center"> <img src="svg/drone.svg" class="w-[20vmin]" alt="drone icon" /> </span>
 				<!-- ^^ ascii logo for mobile-->
 				<div class=" flex flex-col justify-between">
 					General Technician
@@ -57,7 +57,7 @@
 				efficiently with all the teams and learn from their areas of research.
 			</span>
 		</div>
-		<div id="outside" class="w-full max-w-max"><img src="static/svg/drone.svg" class="w-[10vmin]" alt="drone icon" /></div>
+		<div id="outside" class="w-full max-w-max"><img src="svg/drone.svg" class="w-[10vmin]" alt="drone icon" /></div>
 		<!-- ^^ ascii logo for desktop -->
 	</section>
 </div>
