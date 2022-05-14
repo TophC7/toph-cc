@@ -9,7 +9,8 @@ module.exports = {
         offWhite: '#e5e4e7'
       },
       fontFamily: {
-        'Inter': ['Inter', 'sans-serif']
+        'Inter': ['Inter', 'sans-serif'],
+        'courier-new': ['courier-new', 'monospace']
       },
     }
   },

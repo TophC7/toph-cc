@@ -17,6 +17,15 @@
     }
 }
 
+@font-face {
+    font-family: 'courier-new';
+    src: url('https://toph.cc/cour-webfont.woff2') format('woff2'),
+         url('https://toph.cc/cour-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
 /* INFO: sets html and body to the full size of the viewport */
 /* WHY: 100vh was not working for mobile. Page would go past mobile ui and be janky*/
 html, body{
