@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap');
+/* ^^ Courier Prime font */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
 /* ^^ Inter font */
 
@@ -17,14 +19,6 @@
     }
 }
 
-@font-face {
-    font-family: 'courier-new';
-    src: url('https://toph.cc/cour-webfont.woff2') format('woff2'),
-         url('https://toph.cc/cour-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-
-}
 
 /* INFO: sets html and body to the full size of the viewport */
 /* WHY: 100vh was not working for mobile. Page would go past mobile ui and be janky*/

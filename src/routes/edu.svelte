@@ -1,6 +1,4 @@
 <script>
-	import UOFR from '../lib/ascii/ufor.svelte';
-	import UPR from '../lib/ascii/upr.svelte';
 	import { page } from '../lib/stores';
 
 	page.set('Edu');
@@ -12,7 +10,7 @@
 		<div>
 			<!-- ^^ wrapping div to keep content togheter otherwise outside logo and text wont flex correctly -->
 			<div class=" flex gap-4">
-				<span id="inside" class=" pb-4"> <UPR /> </span>
+				<span id="inside" class=" pb-4"> <img src="static/svg/upr.svg" class="w-[30vmin]" alt="univesity of puerto rico logo" /> </span>
 				<!-- ^^ ascii logo for mobile-->
 				<div class=" flex flex-col justify-between">
 					University of Puerto Rico, Mayagüez <br />
@@ -25,7 +23,7 @@
 			Relevant courses: <span class=" font-normal text-offWhite">Computer programming in Python, Advance programming in Java, Discrete Mathematics</span> <br />
 			GPA: <span class=" font-normal text-offWhite">3.45 wtih 88 completed credits</span> <br />
 		</div>
-		<span id="outside"> <UPR /> </span>
+		<div id="outside" class="w-full max-w-max"><img src="static/svg/upr.svg" class="w-[20vmin]" alt="univesity of puerto rico logo" /></div>
 		<!-- ^^ ascii logo for desktop -->
 	</section>
 
@@ -33,7 +31,7 @@
 	<section name="UFOR" class=" lg:flex font-Inter font-semibold text-[4vmin] lg:text-[2.5vmin] text-accent">
 		<div>
 			<div class=" flex gap-4">
-				<span id="inside" class=" pb-4"> <UOFR /> </span>
+				<span id="inside" class=" pb-4"> <img src="static/svg/uofr.svg" class="w-[30vmin]" alt="univesity of regina logo" /> </span>
 				<div class=" flex flex-col justify-between">
 					University of Regina, Saskatchewan <br />
 					<div>- - - - - - - - - - - - - - - - -</div>
@@ -43,7 +41,7 @@
 			Studies in: <span class=" font-normal text-offWhite"> Computer Science and Sociohumanistics</span> <br />
 			Relevant courses: <span class=" font-normal text-offWhite"> Advance programming in C++, Algorithms</span> <br />
 		</div>
-		<span id="outside"> <UOFR /> </span>
+		<div id="outside" class="w-full max-w-max"><img src="static/svg/uofr.svg" class="w-[20vmin]" alt="univesity of regina logo" /></div>
 	</section>
 
 	<section name="cert" class=" lg:flex font-Inter font-semibold text-[4vmin] lg:text-[2.5vmin] text-accent">
