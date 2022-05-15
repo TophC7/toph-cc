@@ -26,7 +26,7 @@
 	<!-- INFO: main site conetent -->
 	<div class="flex flex-col w-[80vw] h-full mx-auto max-w-[80rem] gap-14 py-14">
 		<Header />
-		<main class=" h-full overflow-auto">
+		<main class=" h-full overflow-auto pr-2">
 			<slot />
 		</main>
 		<Footer />
@@ -34,4 +34,25 @@
 </div>
 
 <style>
+	/* INFO: scrollbar styling */
+	/* width */
+	::-webkit-scrollbar {
+		width: 6px;
+	}
+
+	/* Track */
+	::-webkit-scrollbar-track {
+		background: transparent;
+	}
+
+	/* Handle */
+	::-webkit-scrollbar-thumb {
+		background: #888;
+		border-radius: 10px;
+	}
+
+	/* Handle on hover */
+	::-webkit-scrollbar-thumb:hover {
+		background: #555;
+	}
 </style>

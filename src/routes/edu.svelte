@@ -8,9 +8,9 @@
 	<!-- WHO: UPRM section -->
 	<section name="UPRM" class=" lg:flex font-Inter font-semibold text-[4vmin] lg:text-[2.5vmin] text-accent">
 		<div>
-			<!-- ^^ wrapping div to keep content togheter otherwise outside logo and text wont flex correctly -->
+			<!-- ^^ wrapping div to keep content togheter otherwise desktop logo and text wont flex correctly -->
 			<div class=" flex gap-4">
-				<span id="inside" class=" pb-4"> <img src="svg/upr.svg" class="w-[30vmin]" alt="univesity of puerto rico logo" /> </span>
+				<span id="mobile" class=" pb-4"> <img src="svg/upr.svg" class="w-[20vmin]" alt="univesity of puerto rico logo" /> </span>
 				<!-- ^^ ascii logo for mobile-->
 				<div class=" flex flex-col justify-between">
 					University of Puerto Rico, Mayagüez <br />
@@ -23,7 +23,7 @@
 			Relevant courses: <span class=" font-normal text-offWhite">Computer programming in Python, Advance programming in Java, Discrete Mathematics</span> <br />
 			GPA: <span class=" font-normal text-offWhite">3.45 wtih 88 completed credits</span> <br />
 		</div>
-		<div id="outside" class="w-full max-w-max"><img src="svg/upr.svg" class="w-[20vmin]" alt="univesity of puerto rico logo" /></div>
+		<div id="desktop" class="w-full max-w-max"><img src="svg/upr.svg" class="w-[20vmin]" alt="univesity of puerto rico logo" /></div>
 		<!-- ^^ ascii logo for desktop -->
 	</section>
 
@@ -31,7 +31,7 @@
 	<section name="UFOR" class=" lg:flex font-Inter font-semibold text-[4vmin] lg:text-[2.5vmin] text-accent">
 		<div>
 			<div class=" flex gap-4">
-				<span id="inside" class=" pb-4"> <img src="svg/uofr.svg" class="w-[30vmin]" alt="univesity of regina logo" /> </span>
+				<span id="mobile" class=" pb-4"> <img src="svg/uofr.svg" class="w-[20vmin]" alt="univesity of regina logo" /> </span>
 				<div class=" flex flex-col justify-between">
 					University of Regina, Saskatchewan <br />
 					<div>- - - - - - - - - - - - - - - - -</div>
@@ -41,7 +41,7 @@
 			Studies in: <span class=" font-normal text-offWhite"> Computer Science and Sociohumanistics</span> <br />
 			Relevant courses: <span class=" font-normal text-offWhite"> Advance programming in C++, Algorithms</span> <br />
 		</div>
-		<div id="outside" class="w-full max-w-max"><img src="svg/uofr.svg" class="w-[20vmin]" alt="univesity of regina logo" /></div>
+		<div id="desktop" class="w-full max-w-max"><img src="svg/uofr.svg" class="w-[20vmin]" alt="univesity of regina logo" /></div>
 	</section>
 
 	<section name="cert" class=" lg:flex font-Inter font-semibold text-[4vmin] lg:text-[2.5vmin] text-accent">
@@ -61,16 +61,16 @@
 <style>
 	/* INFO: This hides or shows the correct uni logo depending in the screen */
 	/* WHY: tailwind once again is horrible dealing with @media*/
-	#outside {
+	#desktop {
 		display: none;
 		margin-left: auto;
 	}
 	@media only screen and (min-width: 1024px) {
-		#inside {
+		#mobile {
 			display: none;
 		}
 
-		#outside {
+		#desktop {
 			display: block;
 		}
 	}
