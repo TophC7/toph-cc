@@ -1,5 +1,5 @@
 <script>
-	import { page } from '../lib/stores';
+	import { page } from '$lib/stores';
 
 	let pageValue;
 	// ^^ page name

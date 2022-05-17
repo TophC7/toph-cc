@@ -1,5 +1,5 @@
 <script>
-	import { page } from '../lib/stores';
+	import { page } from '$lib/stores';
 
 	// INFO: sets the page for the header tittle
 	page.set('Home');

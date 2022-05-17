@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap');
-/* ^^ Courier Prime font */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
 /* ^^ Inter font */
 
@@ -16,6 +14,11 @@
     /* INFO: for icons in contact information */
     .icon {
         @apply flex landscape:w-[4vmin] landscape:h-[4vmin] portrait:w-[6vmin] portrait:h-[6vmin] justify-center
+    }
+
+    /* INFO: for lables with technology under projects  */
+    .label {
+        @apply bg-complementary px-2 rounded-lg
     }
 }
 

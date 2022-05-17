@@ -1,7 +1,7 @@
 <script>
 	import '../app.css';
-	import Croissant from '../../static/croissant.svelte';
-	import { complementary } from '../lib/stores';
+	import Croissant from '$static/croissant.svelte';
+	import { complementary } from '$lib/stores';
 </script>
 
 <!-- INFO:: a weird space shows up if u zoom out on mobile so i filled it with a croissant -->
@@ -13,7 +13,7 @@
 
 <!-- INFO: Actual Layout -->
 <div class=" bg-background w-full h-full">
-	<div class="flex flex-col w-[80vw] h-full mx-auto max-w-[80rem] gap-14 py-14">
+	<div class="flex flex-col w-[80vw] max-w-[80rem] h-full mx-auto gap-14 py-14">
 		<header class=" font-Inter text-offWhite font-semibold text-[7.4vmin]">Contact Information</header>
 
 		<main class=" h-full">

@@ -1,9 +1,9 @@
 <script>
-	import PDF from '../../static/filePDF.svelte';
-	import LinkedIn from '../../static/linkedIn.svelte';
-	import Email from '../../static/envelope.svelte';
-	import Github from '../../static/github.svelte';
-	import { complementary } from '../lib/stores';
+	import PDF from '$static/filePDF.svelte';
+	import LinkedIn from '$static/linkedIn.svelte';
+	import Email from '$static/envelope.svelte';
+	import Github from '$static/github.svelte';
+	import { complementary } from '$lib/stores';
 </script>
 
 <div class=" flex flex-col font-Inter font-semibold landscape:text-[4vmin] landscape:leading-[4vmin] portrait:text-[6vmin] portrait:leading-[6vmin] leading-none text-accent gap-14">
