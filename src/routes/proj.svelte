@@ -32,7 +32,7 @@
 		<a class="flex gap-2 h-[5vmin] text-[5vmin] lg:h-[4vmin] lg:text-[4vmin] leading-none" href="https://github.com/TophC7/Personal-Site">
 			Toph.cc
 
-			<i class=" h-[2vmin]"><Link color={offWhite} /> </i>
+			<i class=" h-[3vmin] lg:h-[2vmin]"><Link color={offWhite} /> </i>
 		</a>
 		<p class=" font-normal text-offWhite text-[4vmin] lg:text-[2vmin]">This website! A Personal Portfolio created wtih SvelteKit.</p>
 		<img class=" rounded-lg" src="/toph-cc.png" alt="home page to toph.cc" />
