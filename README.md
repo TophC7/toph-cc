@@ -1,4 +1,4 @@
-# Toph.cc
+# [Toph.cc](https://www.toph.cc)
 Hi! This is my personal portfolio created with sveltekit. Feel free to look at my code or even use it if you like it so. I plan to add to this site as I gain experience and make more projects and also to create a subdomain with fun things like small web games and apps.
 
 ## Early Mockups
