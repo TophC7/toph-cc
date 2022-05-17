@@ -1,12 +1,13 @@
 <script>
 	import '../app.css';
 	import Croissant from '../../static/croissant.svelte';
+	import { complementary } from '../lib/stores';
 </script>
 
 <!-- INFO:: a weird space shows up if u zoom out on mobile so i filled it with a croissant -->
 <div class=" fixed h-screen w-screen -z-10 bg-background">
 	<i class=" hover:animate-spin flex w-full h-[6vmin] fixed bottom-6 justify-center place-items-center">
-		<Croissant color="#53D7DF" opacity=".5" />
+		<Croissant color={complementary} opacity=".5" />
 	</i>
 </div>
 

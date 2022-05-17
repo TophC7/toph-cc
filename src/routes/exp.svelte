@@ -4,20 +4,16 @@
 	page.set('Exp');
 </script>
 
-<div class="flex flex-col gap-14">
+<div class="flex flex-col gap-10">
 	<!-- WHO: Casas Mi Eden section -->
-	<section name="CME" class="font-Inter font-semibold text-[4vmin] lg:text-[2.5vmin] text-accent">
-		<div class="flex gap-4">
-			<div id="desktop" class=" h-[10vmin]"><img src="svg/puter.svg" class="h-full" alt="old pc icon" /></div>
-			<!-- ^^ icon for desktop -->
-			<span id="mobile" class=" flex justify-center place-items-center"> <img src="svg/puter.svg" class="w-[15vmin]" alt="old pc icon" /> </span>
-			<!-- ^^ icon for mobile-->
-			<div class=" flex flex-col justify-between">
+	<section name="CME" class="font-Inter font-semibold text-[4vmin] lg:text-[2vmin] text-accent">
+		<div class="flex gap-4 pb-4">
+			<img src="svg/puter.svg" class="h-[10vmin] my-auto" alt="old pc icon" />
+			<div class=" flex flex-col justify-between text-[5vmin] lg:text-[4vmin]">
 				IT Technician & Clerk
 				<div>
 					<!-- ^^ wrapping div -->
-					<span class=" text-complementary">@</span> Casas Mi Eden<br />
-					<div>- - - - - - - - - - - - - - - - -</div>
+					<span class=" text-complementary">@</span> Casas Mi Eden
 				</div>
 			</div>
 		</div>
@@ -31,18 +27,14 @@
 	</section>
 
 	<!-- WHO: UAV Team section -->
-	<section name="UAV" class="font-Inter font-semibold text-[4vmin] lg:text-[2.5vmin] text-accent">
-		<div class=" flex gap-4">
-			<div id="desktop" class=" h-[10vmin]"><img src="svg/drone.svg" class="h-full" alt="drone icon" /></div>
-			<!-- ^^ icon for desktop -->
-			<span id="mobile" class=" flex justify-center place-items-center"> <img src="svg/drone.svg" class="w-[15vmin]" alt="drone icon" /> </span>
-			<!-- ^^ ascii logo for mobile-->
-			<div class=" flex flex-col justify-between">
+	<section name="UAV" class="font-Inter font-semibold text-[4vmin] lg:text-[2vmin] text-accent">
+		<div class=" flex gap-4 pb-4">
+			<img src="svg/drone.svg" class=" h-[10vmin] my-auto" alt="drone icon" />
+			<div class=" flex flex-col justify-between text-[5vmin] lg:text-[4vmin]">
 				General Technician
 				<div>
 					<!-- ^^ wrapping div -->
-					<span class=" text-complementary">@</span> UAV Search And Rescue, UPRM<br />
-					<div>- - - - - - - - - - - - - - - - -</div>
+					<span class=" text-complementary">@</span> UAV Search & Rescue, UPRM
 				</div>
 			</div>
 		</div>
@@ -55,20 +47,3 @@
 		</span>
 	</section>
 </div>
-
-<style>
-	/* INFO: This hides or shows the correct ascii art depending in the screen */
-	/* WHY: tailwind once again is horrible dealing with @media*/
-	#desktop {
-		display: none;
-	}
-	@media only screen and (min-width: 1024px) {
-		#mobile {
-			display: none;
-		}
-
-		#desktop {
-			display: block;
-		}
-	}
-</style>
