@@ -6,5 +6,11 @@
 @tailwind utilities;
 
 @layer components {
-    
+	body {
+		@apply h-screen w-screen bg-Blueblack-900 px-20 font-Inter text-coral-100;
+	}
+
+	.button {
+		@apply rounded-lg border-2 border-coral-100 p-2 leading-none;
+	}
 }

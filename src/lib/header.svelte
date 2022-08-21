@@ -1,1 +1,20 @@
-<header>Hello</header>
+<script>
+	import Croissant from '@SVGs/croissant.svelte';
+	import { accent } from '@lib/stores';
+</script>
+
+<header>
+	<div class="flex h-40 place-items-center text-xl font-semibold">
+		<i class="mr-5 h-6 place-content-center">
+			<Croissant color={accent} />
+		</i>
+		Chris Toph
+		<div class=" ml-auto flex place-items-center gap-5">
+			<a href="/">Github</a>
+			<a class="button" href="/"> Contact </a>
+		</div>
+	</div>
+</header>
+
+<style>
+</style>
