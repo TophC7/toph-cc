@@ -6,26 +6,5 @@
 @tailwind utilities;
 
 @layer components {
-    /* INFO: creates triangle at top right of page */
-    .triangle-t-r{
-        @apply border-solid border-b-accent border-b-[3rem] border-x-transparent border-x-[3rem] border-t-0 fixed -top-2 -right-8 rotate-45
-    }
-
-    /* INFO: for icons in contact information */
-    .icon {
-        @apply flex landscape:w-[4vmin] landscape:h-[4vmin] portrait:w-[6vmin] portrait:h-[6vmin] justify-center
-    }
-
-    /* INFO: for lables with technology under projects  */
-    .label {
-        @apply bg-complementary px-2 rounded-lg
-    }
-}
-
-
-/* INFO: sets html and body to the full size of the viewport */
-/* WHY: 100vh was not working for mobile. Page would go past mobile ui and be janky*/
-html, body{
-    min-height: 100% !important;
-    height: 100%;
+    
 }
