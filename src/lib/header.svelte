@@ -4,8 +4,8 @@
 </script>
 
 <header>
-	<div class="flex h-40 place-items-center text-xl font-semibold">
-		<i class="mr-5 h-6 place-content-center">
+	<div class="header-footer">
+		<i class="mr-5 h-7 place-content-center">
 			<Croissant color={accent} />
 		</i>
 		Chris Toph
@@ -15,6 +15,3 @@
 		</div>
 	</div>
 </header>
-
-<style>
-</style>

@@ -7,10 +7,19 @@
 
 @layer components {
 	body {
-		@apply h-screen w-screen bg-Blueblack-900 px-20 font-Inter text-coral-100;
+		@apply bg-gradient h-screen w-screen px-20 font-Inter text-xl font-light text-coral-100;
 	}
 
 	.button {
-		@apply rounded-lg border-2 border-coral-100 p-2 leading-none;
+		@apply rounded-lg border-2 border-coral-100 p-3 leading-none transition-all ease-linear hover:border-Blueblack-900 hover:bg-coral-100 hover:text-Blueblack-900;
 	}
+
+	.header-footer {
+		@apply flex h-40 place-items-center font-medium;
+	}
+}
+
+.bg-gradient {
+	background: rgb(0, 16, 31);
+	background: linear-gradient(125deg, rgba(0, 16, 31, 1) 0%, rgba(0, 10, 19, 1) 100%);
 }

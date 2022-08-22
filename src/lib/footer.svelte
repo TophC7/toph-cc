@@ -1,1 +1,1 @@
-<footer>Bye</footer>
+<footer class="header-footer">Bye</footer>
