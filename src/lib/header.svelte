@@ -4,8 +4,8 @@
 </script>
 
 <header>
-	<div class="header-footer">
-		<i class="mr-5 h-7 place-content-center">
+	<div class="header-footer gap-5 whitespace-nowrap">
+		<i class="h-7 min-w-max place-content-center">
 			<Croissant color={accent} />
 		</i>
 		Chris Toph

@@ -7,11 +7,23 @@
 
 @layer components {
 	body {
-		@apply bg-gradient h-screen w-screen px-20 font-Inter text-xl font-light text-coral-100;
+		@apply bg-gradient px-20 font-Inter text-xl font-light text-offWhite;
+	}
+
+	.card {
+		@apply box-border flex min-h-max min-w-min flex-col rounded-lg border-l-[.5rem];
+	}
+
+	.card-body {
+		@apply card-gradient flex h-full flex-col gap-5 rounded-lg  p-8;
+	}
+
+	.card-title {
+		@apply text-3xl font-bold;
 	}
 
 	.button {
-		@apply rounded-lg border-2 border-coral-100 p-3 leading-none transition-all ease-linear hover:border-Blueblack-900 hover:bg-coral-100 hover:text-Blueblack-900;
+		@apply max-w-min rounded-lg border-2 border-coral-100 border-opacity-50 p-3 px-4 text-center font-medium leading-none transition-all ease-linear hover:border-Blueblack-900 hover:bg-coral-100 hover:text-Blueblack-900;
 	}
 
 	.header-footer {
@@ -19,7 +31,18 @@
 	}
 }
 
+html,
+body {
+	margin: 0;
+	height: 100%;
+}
+
 .bg-gradient {
 	background: rgb(0, 16, 31);
-	background: linear-gradient(125deg, rgba(0, 16, 31, 1) 0%, rgba(0, 10, 19, 1) 100%);
+	background: linear-gradient(125deg, rgba(0, 16, 31, 1) 0%, rgba(0, 10, 19, 1) 100%) center cover;
+}
+
+.card-gradient {
+	background: rgb(0, 23, 43);
+	background: linear-gradient(125deg, rgba(0, 23, 43, 0.8) 10%, rgba(0, 41, 79, 0.9) 100%);
 }

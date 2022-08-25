@@ -4,13 +4,15 @@
 	import Header from '../lib/header.svelte';
 </script>
 
-<Header />
+<div id="container" class="mx-auto h-screen max-w-7xl">
+	<Header />
 
-<main>
-	<slot />
-</main>
+	<main class="mx-auto flex max-w-7xl flex-col">
+		<slot />
+	</main>
 
-<Footer />
+	<Footer />
+</div>
 
 <!-- <style>
 	/* INFO: scrollbar styling */
