@@ -1,6 +1,6 @@
 <script>
-	import Croissant from '@SVGs/croissant.svelte';
-	import { accent } from '@lib/stores';
+	import Croissant from '$lib/SVGs/croissant.svelte';
+	import { accent } from '$lib/stores';
 </script>
 
 <header>
