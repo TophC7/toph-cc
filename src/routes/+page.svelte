@@ -1,5 +1,7 @@
 <script>
-	import Card from '$lib/card.svelte';
+	import Project from '$lib/project.svelte';
+	import { projects } from '$lib/stores.js';
+	import { nt } from '$lib/stores.js';
 </script>
 
 <main class="flex flex-col gap-10">
@@ -17,24 +19,11 @@
 		</p>
 	</div>
 
-	<Card />
+	<Project project={nt} />
 	<div class="flex gap-5">
-		<Card
-			sideAccent="#e2ff92"
-			title="My Name is Jeff"
-			text="Chris Toph"
-			image="/images/toph-cc.png"
-			link="#"
-			className="w-1/2"
-		/>
-		<Card
-			sideAccent="#01c873"
-			title="Another Tittle"
-			text="This is Some text"
-			image="/images/toph-cc.png"
-			link="#"
-			className="w-1/2"
-		/>
+		{#each projects as project}
+			<Project {project} />
+		{/each}
 	</div>
 </main>
 
