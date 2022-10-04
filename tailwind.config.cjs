@@ -4,7 +4,7 @@ module.exports = {
 		extend: {
 			colors: {
 				complementary: '#53D7DF',
-				offWhite: '#FBEAEA',
+				offWhite: '#FAE6E5',
 				coral: {
 					50: '#FDF7F6',
 					100: '#FAE6E5',
