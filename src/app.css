@@ -22,8 +22,12 @@
 		@apply text-3xl font-bold;
 	}
 
-	.button {
+	.button-cntc {
 		@apply max-w-min rounded-lg p-3 px-4 text-center font-medium leading-none transition-all ease-linear;
+	}
+
+	.button {
+		@apply max-w-min rounded-lg p-3 px-4 text-center font-medium leading-none transition-all ease-linear hover:bg-coral-100 hover:text-Blueblack-900;
 	}
 
 	.header-footer {

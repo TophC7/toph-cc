@@ -4,7 +4,7 @@
 	import Header from '$lib/header.svelte';
 </script>
 
-<div id="container" class="mx-auto h-screen max-w-7xl">
+<div id="container" class="mx-auto h-screen min-w-min max-w-7xl">
 	<Header />
 
 	<main class="mx-auto flex max-w-7xl flex-col">

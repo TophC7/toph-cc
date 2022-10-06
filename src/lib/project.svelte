@@ -8,7 +8,7 @@
 >
 	<div class="card-body">
 		<h1 class="card-title">{project.title}</h1>
-		<p>{project.text}</p>
+		<p class="grow">{project.text}</p>
 		<figure class=" shadow-lg">
 			<img src={project.image} class="rounded-lg" />
 		</figure>
