@@ -13,9 +13,10 @@
 		<p class="">
 			I enjoy working with new technlogies and love learning new things. At the moment, I'm working hard to become a
 			fully fledged full-stack Engineer with
-			<span class="font-medium text-Mint-500">Spring</span> and <span class="font-medium text-Sea-500">React.js</span> as
-			my core technlogies but I work with other techs all the time. You're invited to browse my site and take a look at who
-			I am and all my projects!
+			<span class="font-medium text-Sea-500">Java</span> and
+			<span class="font-medium text-yellow-500">JavaScript</span>
+			as my core languages but I work with other techs all the time. You're invited to browse my site and take a look at
+			who I am and all my projects!
 		</p>
 	</div>
 

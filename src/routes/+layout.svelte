@@ -5,6 +5,9 @@
 </script>
 
 <div id="container" class="mx-auto h-screen min-w-min max-w-7xl">
+	<span class="absolute right-0 flex w-full justify-center bg-coral-500 p-1 text-xs font-bold">
+		Website still under work! Contact me for more Updated info 🙂</span
+	>
 	<Header />
 
 	<main class="mx-auto flex max-w-7xl flex-col">
