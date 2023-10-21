@@ -5,11 +5,11 @@
 	"version": "0.2.0",
 	"configurations": [
 		{
-			"name": "Launch Firefox",
-			"type": "firefox",
-			"request": "launch",
-			"reAttach": true,
-			"file": "${workspaceFolder}/index.html"
-		}
+			"name": "Attach to Chrome",
+			"port": 9222,
+			"request": "attach",
+			"type": "chrome",
+			"webRoot": "${workspaceFolder}"
+		},
 	]
 }

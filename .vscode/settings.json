@@ -1,11 +1,24 @@
 {
+	"auto-run-command.rules": [
+		{
+			"command": "browse-lite.open",
+			"condition": "always",
+			"message": "Open Browser"
+		}
+	],
+	"browse-lite.startUrl": "http://localhost:4000/",
+	"explorer.compactFolders": false,
 	"explorer.fileNesting.enabled": true,
-	"explorer.fileNesting.patterns": {
-		"package.json": ".eslintignore ,.eslintrc.cjs ,.gitignore ,.npmrc ,.prettierignore ,.prettierrc ,bun.lockb ,package.json ,postcss.config.js ,svelte.config.js ,tailwind.config.ts ,tsconfig.json ,vite.config.ts"
-	},
 	"explorer.fileNesting.expand": true,
+	"explorer.fileNesting.patterns": {
+		"package.json": ".eslintignore ,.eslintrc.cjs ,.gitignore ,.npmrc ,.prettierignore ,.prettierrc, prettier.config.js ,bun.lockb ,package.json ,postcss.config.js ,svelte.config.js ,tailwind.config.ts ,tsconfig.json ,vite.config.ts"
+	},
+	"explorer.sortOrder": "filesFirst",
 	"files.exclude": {
 		".svelte-kit": true,
 		"node_modules": true
-	}
+	},
+	"prettier.documentSelectors": [
+		"**/*.svelte"
+	]
 }
