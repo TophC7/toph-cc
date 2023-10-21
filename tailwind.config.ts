@@ -16,7 +16,8 @@ const config = {
 	theme: {
 		extend: {
 			fontFamily: {
-				Inter: ['Inter', 'sans-serif']
+				Inter: ['Inter', 'sans-serif'],
+				Alpino: ['Alpino', 'sans']
 			}
 		}
 	},
