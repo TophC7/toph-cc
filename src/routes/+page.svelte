@@ -1,5 +1,6 @@
 <script lang="ts">
 	import ArrayFormat from '$lib/components/ArrayFormat.svelte';
+	import Project from '$lib/components/Project.svelte';
 	const techs = [
 		'Fhir',
 		'Keycloak',
@@ -17,13 +18,13 @@
 	<meta name="description" content="My Portfolio" />
 </svelte:head>
 
-<section class="pt-8 xl:pt-14 ease-linear transition-all">
+<section class="pt-8 transition-all ease-linear xl:pt-14">
 	<div>
 		<h1
-			class="glow pb-5 max-w-4xl text-4xl xl:text-5xl font-bold leading-snug text-primary-500 ease-linear transition-all"
+			class="glow max-w-4xl pb-5 text-4xl font-bold leading-snug text-primary-500 transition-all ease-linear xl:text-5xl"
 		>
 			Welcome to my portfolio!<br />
-			I'm Chris, a young Software Engineer and Web Developer
+			I'm Chris, a Software Engineer and Web Developer
 		</h1>
 		<p class="max-w-5xl">
 			At the moment, I am working as a developer for
@@ -40,11 +41,7 @@
 	</div>
 </section>
 
-<section class="pt-8 xl:pt-14 ease-linear transition-all">
-	<div class="card variant-soft-secondary p-4">
-		<span>basic</span>
-	</div>
-</section>
+<Project tittle="Nerf This" description="Nerf This Project" action={{ url: '/', text: 'Git' }} />
 
 <style>
 	.glow {
@@ -53,7 +50,7 @@
 	}
 
 	.fable {
-		@apply bg-clip-text text-transparent box-decoration-clone;
+		@apply box-decoration-clone bg-clip-text text-transparent;
 		/* Direction */
 		@apply bg-gradient-to-r;
 		/* Color Stops */

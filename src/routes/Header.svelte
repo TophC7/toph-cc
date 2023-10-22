@@ -1,6 +1,7 @@
 <script>
-	import Croissant from './../lib/images/croissant.svelte';
+	import Contact from '$lib/components/Contact.svelte';
 	import { AppBar } from '@skeletonlabs/skeleton';
+	import Croissant from '$lib/SVGs/croissant.svelte';
 </script>
 
 <AppBar class="w-full" regionRowMain="mx-auto flex xl:max-w-7xl w-full">
@@ -9,7 +10,7 @@
 	</svelte:fragment>
 	<h1 class="text-xl">Chris Toph</h1>
 	<svelte:fragment slot="trail">
-		<button type="button" class="btn variant-soft-primary">Contact</button>
+		<Contact />
 	</svelte:fragment>
 </AppBar>
 
