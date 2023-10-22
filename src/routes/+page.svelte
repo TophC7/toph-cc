@@ -27,12 +27,14 @@
 		</h1>
 		<p class="max-w-5xl">
 			At the moment, I am working as a developer for
-			<a class="underline text-warning-500" href="https://nicheaim.com/">NicheAim Technologies</a>
+			<a class="font-Alpino-medium text-warning-500 underline" href="https://nicheaim.com/"
+				>NicheAim Technologies</a
+			>
 			with Full-Stack projects related to FHIR and Healthcare gaining valuable experience to become the
-			<span class="font-medium fable"> fabled 10x Dev</span>. My core languages are
-			<span class="font-medium text-error-500">Java</span> and
-			<span class="font-medium text-secondary-500">TypeScript</span> and some technologies I work
-			with are <ArrayFormat array={techs} /> but I work with other techs all the time and love learning
+			<span class="font-Alpino-medium fable"> fabled 10x Dev</span>. My core languages are
+			<span class="font-Alpino-medium text-error-500">Java</span> and
+			<span class="font-Alpino-medium text-secondary-500">TypeScript</span> and some technologies I
+			work with are <ArrayFormat array={techs} /> but I work with other techs all the time and love learning
 			new ones. You're invited to browse around my site, learn more about me, and see my projects!
 		</p>
 	</div>
