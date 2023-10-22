@@ -1,9 +1,9 @@
 <script lang="ts">
+	import { copy } from '$lib/tools';
 	import Icon from '@iconify/svelte';
-	import { getToastStore, type ToastSettings } from '@skeletonlabs/skeleton';
+	import { getToastStore } from '@skeletonlabs/skeleton';
 	import { slide } from 'svelte/transition';
 	import Tooltip from './Tooltip.svelte';
-	import { copy } from '$lib/utils/copy';
 
 	const toastStore = getToastStore();
 	const email = 'chris@toph.cc';
@@ -56,7 +56,7 @@
 				</button>
 			</Tooltip>
 			<Tooltip text="Resume" position="bottom">
-				<a href="/Resume.pdf">
+				<a href="/docs/Resume.pdf">
 					<Icon icon="mingcute:file-info-fill" class="contactIcon" />
 				</a>
 			</Tooltip>

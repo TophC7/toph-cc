@@ -41,7 +41,19 @@
 	</div>
 </section>
 
-<Project tittle="Nerf This" description="Nerf This Project" action={{ url: '/', text: 'Git' }} />
+<Project
+	tittle="Nerf This"
+	description="Nerf This Project"
+	imageSource="images/morgana-nt.png"
+	action={{ url: '/', text: 'Git' }}
+/>
+
+<Project
+	tittle="Toph.cc"
+	description="Toph.cc Project"
+	imageSource="/images/toph-cc.png"
+	action={{ url: '/', text: 'Git' }}
+/>
 
 <style>
 	.glow {
