@@ -20,5 +20,8 @@
 	},
 	"prettier.documentSelectors": [
 		"**/*.svelte"
+	],
+	"cSpell.words": [
+		"tinycolor"
 	]
 }
