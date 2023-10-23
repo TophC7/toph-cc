@@ -18,7 +18,7 @@
 	<meta name="description" content="My Portfolio" />
 </svelte:head>
 
-<section class="pt-8 transition-all ease-linear xl:pt-14">
+<section class="section">
 	<div>
 		<h1
 			class="glow max-w-4xl pb-5 text-4xl font-bold leading-snug text-primary-500 transition-all ease-linear xl:text-5xl"
@@ -41,19 +41,35 @@
 	</div>
 </section>
 
-<Project
-	tittle="Nerf This"
-	description="Nerf This Project"
-	imageSource="images/morgana-nt.png"
-	action={{ url: '/', text: 'Git' }}
-/>
+<section class="section">
+	<Project
+		tittle="Nerf This"
+		description="Nerf This Project"
+		imageSource="images/morgana-nt.png"
+		action={{ url: '/', text: 'Git' }}
+	/>
 
-<Project
-	tittle="Toph.cc"
-	description="Toph.cc Project"
-	imageSource="/images/toph-cc.png"
-	action={{ url: '/', text: 'Git' }}
-/>
+	<Project
+		tittle="Kiwis"
+		description="Kiwis Project"
+		imageSource="/images/kiwi-site.jpeg"
+		action={{ url: '/', text: 'Git' }}
+	/>
+
+	<Project
+		tittle="Quizspark"
+		description="Quizspark Project"
+		imageSource="/images/quizspark.jpeg"
+		action={{ url: '/', text: 'Git' }}
+	/>
+
+	<Project
+		tittle="Toph.cc"
+		description="Toph.cc Project"
+		imageSource="/images/toph-cc.png"
+		action={{ url: '/', text: 'Git' }}
+	/>
+</section>
 
 <style>
 	.glow {
@@ -91,6 +107,13 @@
 		}
 		60% {
 			text-shadow: white;
+		}
+	}
+
+	.section {
+		@apply flex flex-col gap-8 pt-8 transition-all ease-linear;
+		@media (min-width: 1280px) {
+			padding-top: 3.5rem;
 		}
 	}
 </style>
