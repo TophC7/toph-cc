@@ -1,13 +1,13 @@
 <script lang="ts">
 	import { fly } from 'svelte/transition';
 	import { Palette, type PaletteTuple } from '$lib/Palette';
-	import { link, uniqueId } from '$lib/tools';
+	import { linkOut, uniqueId } from '$lib/tools';
 	import ColorThief from 'colorthief';
 	import { onMount } from 'svelte';
 
 	type ProjectAction = { url: string; text: string; disabled?: boolean };
 
-	export let tittle = 'Tittle'; // Project Tittle
+	export let title = 'title'; // Project title
 	export let description = 'Description'; // Project Description Text
 	export let imageSource = '/images/toph-cc.png'; // Project Image Source
 	export let actions: ProjectAction[]; // Project Action Button, Optional
@@ -43,9 +43,9 @@
 	function getArticleVars(): Promise<string> {
 		return new Promise((res) =>
 			setTimeout(() => {
-				const vars = getPaletteVars(palette.soft(true));
+				const vars = palette && getPaletteVars(palette.soft(true));
 				res(vars);
-			}, 200)
+			}, 500)
 		);
 	}
 
@@ -74,16 +74,14 @@
 				/>
 			</div>
 			<div class="card-content">
-				<h2 class="card-tittle">
-					{tittle}
+				<h2 class="card-title">
+					{title}
 				</h2>
-				<div class="card-description">
-					{description}
-				</div>
+				<div class="card-description" contenteditable="false" bind:innerHTML={description} />
 				{#if actions}
 					<div class="card-actions">
 						{#each actions as action}
-							<button class="variant-soft btn" disabled={action.disabled} use:link={action.url}>
+							<button class="variant-soft btn" disabled={action.disabled} use:linkOut={action.url}>
 								{action.text}
 							</button>
 						{/each}
@@ -91,24 +89,17 @@
 				{/if}
 			</div>
 		{:else}
-			<h2 class="card-tittle">
-				{tittle}
+			<h2 class="card-title">
+				{title}
 			</h2>
-			<div class="card-description">
-				{description}
-			</div>
+			<div class="card-description" contenteditable="false" bind:innerHTML={description} />
 			<div class="card-image">
-				<img
-					class="h-full w-full object-cover"
-					id={imageId}
-					src={imageSource}
-					alt="screenshot of the project"
-				/>
+				<img id={imageId} src={imageSource} alt="screenshot of the project" />
 			</div>
 			{#if actions}
 				<div class="card-actions">
 					{#each actions as action}
-						<button class="variant-soft btn" disabled={action.disabled} use:link={action.url}>
+						<button class="variant-soft btn" disabled={action.disabled} use:linkOut={action.url}>
 							{action.text}
 						</button>
 					{/each}
@@ -128,7 +119,8 @@
 	article.landscape {
 		@apply grid gap-4;
 		grid-template-columns: 1fr 30%;
-		& .card-tittle {
+		grid-template-rows: 1fr;
+		& .card-title {
 			@apply text-4xl;
 		}
 		& .card-description {
@@ -137,27 +129,29 @@
 	}
 
 	.card-content {
-		@apply flex flex-col gap-2;
-		grid-area: 'content';
+		@apply flex h-full flex-col gap-2;
 	}
 
-	.card-tittle {
+	.card-title {
 		@apply text-3xl font-bold;
 	}
 
 	.card-description {
-		@apply h-full text-base;
+		@apply text-base;
 	}
 
 	.card-image {
-		@apply max-h-min max-w-full;
+		@apply relative;
+		height: 0;
+		padding-bottom: 56.25%; /* 16:9 aspect ratio */
 		& > img {
+			@apply absolute left-0 top-0 object-cover;
 			border-radius: var(--theme-rounded-base);
 		}
 	}
 
 	.card-actions {
-		@apply flex w-full items-center justify-end gap-4;
+		@apply mt-auto flex justify-end gap-4;
 	}
 
 	.btn {

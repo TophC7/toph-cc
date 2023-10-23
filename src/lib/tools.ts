@@ -35,3 +35,12 @@ export function copy(node: Node, string: string) {
 export function link(node: Node, url: string) {
 	node.addEventListener('click', () => (location.href = url));
 }
+
+/**
+ * Attaches an event listener to a DOM node that opens a URL in a new tab when clicked.
+ * @param node - The DOM node to attach the event listener to. Only needed to use as a svelte directive.
+ * @param url - The URL to open in a new tab.
+ */
+export function linkOut(node: Node, url: string) {
+	node.addEventListener('click', () => window.open(url, '_blank', 'noopener noreferrer'));
+}

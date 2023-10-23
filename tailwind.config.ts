@@ -17,7 +17,7 @@ const config = {
 		extend: {
 			fontFamily: {
 				Inter: ['Inter', 'sans-serif'],
-				Alpino: ['Alpino', 'sans']
+				Alpino: ['Alpino', 'Satoshi', 'Inter', 'sans']
 			}
 		}
 	},

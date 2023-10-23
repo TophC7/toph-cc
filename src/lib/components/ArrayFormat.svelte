@@ -2,7 +2,7 @@
 	export let array: Array<string>;
 </script>
 
-<span class="font-Alpino-medium text-tertiary-500">
+<span class="font-medium text-tertiary-500">
 	{#each array as str, i}
 		{#if i === 0}
 			<i class="bracket">{'['}</i>{`'${str}'`}<i class="comma">{', '}</i>

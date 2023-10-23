@@ -25,7 +25,7 @@
 <style>
 	.tooltip-container {
 		position: relative;
-		display: inline-block;
+		display: inherit;
 	}
 
 	.tooltip {

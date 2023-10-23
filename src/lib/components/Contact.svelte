@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { copy } from '$lib/tools';
+	import { copy, link, linkOut } from '$lib/tools';
 	import Icon from '@iconify/svelte';
 	import { getToastStore } from '@skeletonlabs/skeleton';
 	import { slide } from 'svelte/transition';
@@ -36,14 +36,14 @@
 	{#if contactOpen}
 		<div class="iconWrapper br-r-unset" transition:slide={{ axis: 'x' }}>
 			<Tooltip text="Github" position="bottom">
-				<a href="https://github.com/tophc7">
+				<button use:linkOut={'https://github.com/tophc7'}>
 					<Icon icon="mingcute:github-fill" />
-				</a>
+				</button>
 			</Tooltip>
 			<Tooltip text="LinkedIn" position="bottom">
-				<a href="https://www.linkedin.com/in/tophc7/">
+				<button use:linkOut={'https://www.linkedin.com/in/tophc7/'}>
 					<Icon icon="mingcute:linkedin-fill" class="contactIcon" />
-				</a>
+				</button>
 			</Tooltip>
 			<Tooltip text="Email" position="bottom">
 				<button
@@ -56,22 +56,22 @@
 				</button>
 			</Tooltip>
 			<Tooltip text="Resume" position="bottom">
-				<a href="/docs/Resume.pdf">
+				<button use:link={'/docs/Resume.pdf'}>
 					<Icon icon="mingcute:file-info-fill" class="contactIcon" />
-				</a>
+				</button>
 			</Tooltip>
 		</div>
 	{/if}
 	<button class="contactBtn" class:br-l-unset={contactOpen} on:click={handleClick}>Contact</button>
 </div>
 
-<style>
+<style lang="postcss">
 	:global(.contactIcon) {
 		@apply cursor-pointer text-primary-50;
 	}
 
 	.contactBtn {
-		@apply variant-soft-primary btn inline-flex items-center justify-center gap-3 whitespace-nowrap px-5 py-2 text-center text-base transition-all;
+		@apply variant-soft-primary btn inline-flex items-center justify-center gap-3 whitespace-nowrap px-5 py-2 text-center text-base text-primary-50 transition-all;
 		border-radius: var(--theme-rounded-base);
 	}
 

@@ -14,11 +14,11 @@
 	];
 
 	// TODO: fetch from api in the future
+	const cesarAmaroLink = `<a href="https://www.cesaramaro.co" target="_blank" rel="noopener noreferrer">@CesarAmaro</a>`;
 	const projects = [
 		{
-			tittle: 'Nerf This',
-			description:
-				"A game statistics web app using Next.js and TailwindCSS that lets players easily check out their in-game stats directly from Riot's API. Built in collaboration with @CesarAmaro, our goal is to make it user-friendly, responsive and visually appealing.",
+			title: 'Nerf This',
+			description: `A game statistics web app using Next.js and TailwindCSS that lets players easily check out their in-game stats directly from Riot's API. Built in collaboration with ${cesarAmaroLink}, our goal is to make it user-friendly, responsive and visually appealing.`,
 			imageSource: '/images/morgana-nt.png',
 			actions: [
 				{ url: '/', text: 'Live Soon', disabled: true },
@@ -26,7 +26,7 @@
 			]
 		},
 		{
-			tittle: 'Kiwis',
+			title: 'Kiwis',
 			description:
 				'A random website about Kiwis. Created to look like a 2017 High school project with questionable Styling and Colors.',
 			imageSource: '/images/kiwi-site.jpeg',
@@ -37,14 +37,14 @@
 		},
 		{
 			// TODO: this one really needs more pics
-			tittle: 'Quizspark',
+			title: 'Quizspark',
 			description:
 				'Quiz WebApp to facilitate learning Java within GenSpark with Quizzes, Notes, Flashcards and Forums.',
 			imageSource: '/images/quizspark.jpeg',
 			actions: []
 		},
 		{
-			tittle: 'Toph.cc',
+			title: 'Toph.cc',
 			description:
 				'This website! My personal portfolio and experimental site. Explore its different versions over time and see how it has evolved.',
 			imageSource: '/images/toph-cc.png',
@@ -68,14 +68,14 @@
 		</h1>
 		<p class="max-w-5xl">
 			At the moment, I am working as a developer for
-			<a class="font-Alpino-medium text-warning-500 underline" href="https://nicheaim.com/"
+			<a class="font-medium text-warning-500 underline" href="https://nicheaim.com/"
 				>NicheAim Technologies</a
 			>
 			with Full-Stack projects related to FHIR and Healthcare gaining valuable experience to become the
-			<span class="font-Alpino-medium fable"> fabled 10x Dev</span>. My core languages are
-			<span class="font-Alpino-medium text-error-500">Java</span> and
-			<span class="font-Alpino-medium text-secondary-500">TypeScript</span> and some technologies I
-			work with are <ArrayFormat array={techs} /> but I work with other techs all the time and love learning
+			<span class="fable font-medium"> fabled 10x Dev</span>. My core languages are
+			<span class="font-medium text-error-500">Java</span> and
+			<span class="font-medium text-secondary-500">TypeScript</span> and some technologies I work
+			with are <ArrayFormat array={techs} /> but I work with other techs all the time and love learning
 			new ones. You're invited to browse around my site, learn more about me, and see my projects!
 		</p>
 	</div>
