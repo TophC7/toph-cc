@@ -1,6 +1,7 @@
 <script lang="ts">
 	import ArrayFormat from '$lib/components/ArrayFormat.svelte';
 	import Project from '$lib/components/Project.svelte';
+
 	const techs = [
 		'Fhir',
 		'Keycloak',
@@ -71,18 +72,14 @@
 	/>
 </section>
 
-<style>
+<style lang="postcss">
 	.glow {
 		text-shadow: 0 0 0.8rem rgba(var(--color-primary-700));
 		animation: blink linear infinite 5s;
 	}
 
 	.fable {
-		@apply box-decoration-clone bg-clip-text text-transparent;
-		/* Direction */
-		@apply bg-gradient-to-r;
-		/* Color Stops */
-		@apply from-warning-500 via-error-500 to-secondary-500;
+		@apply bg-gradient-to-r from-warning-500 via-error-500 to-secondary-500 box-decoration-clone bg-clip-text text-transparent;
 		background-size: 400%;
 		-webkit-animation: flowGradient 10s ease infinite;
 		-moz-animation: flowGradient 10s ease infinite;
@@ -111,9 +108,9 @@
 	}
 
 	.section {
-		@apply flex flex-col gap-8 pt-8 transition-all ease-linear;
-		@media (min-width: 1280px) {
-			padding-top: 3.5rem;
+		@apply flex flex-col gap-8 pt-8 text-base transition-all ease-linear;
+		@screen xl {
+			@apply text-xl;
 		}
 	}
 </style>
