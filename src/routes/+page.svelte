@@ -12,6 +12,45 @@
 		'Docker',
 		'Google Cloud'
 	];
+
+	// TODO: fetch from api in the future
+	const projects = [
+		{
+			tittle: 'Nerf This',
+			description:
+				"A game statistics web app using Next.js and TailwindCSS that lets players easily check out their in-game stats directly from Riot's API. Built in collaboration with @CesarAmaro, our goal is to make it user-friendly, responsive and visually appealing.",
+			imageSource: '/images/morgana-nt.png',
+			actions: [
+				{ url: '/', text: 'Live Soon', disabled: true },
+				{ url: 'https://github.com/cesaramaro/leaguestats', text: 'GitHub' }
+			]
+		},
+		{
+			tittle: 'Kiwis',
+			description:
+				'A random website about Kiwis. Created to look like a 2017 High school project with questionable Styling and Colors.',
+			imageSource: '/images/kiwi-site.jpeg',
+			actions: [
+				{ url: 'https://kiwi.toph.cc', text: 'Live' },
+				{ url: 'https://github.com/TophC7/kiwi-site', text: 'GitHub' }
+			]
+		},
+		{
+			// TODO: this one really needs more pics
+			tittle: 'Quizspark',
+			description:
+				'Quiz WebApp to facilitate learning Java within GenSpark with Quizzes, Notes, Flashcards and Forums.',
+			imageSource: '/images/quizspark.jpeg',
+			actions: []
+		},
+		{
+			tittle: 'Toph.cc',
+			description:
+				'This website! My personal portfolio and experimental site. Explore its different versions over time and see how it has evolved.',
+			imageSource: '/images/toph-cc.png',
+			actions: [{ url: 'https://github.com/TophC7/Personal-Site', text: 'GitHub' }]
+		}
+	];
 </script>
 
 <svelte:head>
@@ -43,33 +82,9 @@
 </section>
 
 <section class="section">
-	<Project
-		tittle="Nerf This"
-		description="Nerf This Project"
-		imageSource="images/morgana-nt.png"
-		action={{ url: '/', text: 'Git' }}
-	/>
-
-	<Project
-		tittle="Kiwis"
-		description="Kiwis Project"
-		imageSource="/images/kiwi-site.jpeg"
-		action={{ url: '/', text: 'Git' }}
-	/>
-
-	<Project
-		tittle="Quizspark"
-		description="Quizspark Project"
-		imageSource="/images/quizspark.jpeg"
-		action={{ url: '/', text: 'Git' }}
-	/>
-
-	<Project
-		tittle="Toph.cc"
-		description="Toph.cc Project"
-		imageSource="/images/toph-cc.png"
-		action={{ url: '/', text: 'Git' }}
-	/>
+	{#each projects as project}
+		<Project {...project} />
+	{/each}
 </section>
 
 <style lang="postcss">
