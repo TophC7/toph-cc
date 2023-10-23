@@ -1,14 +1,16 @@
 <script lang="ts">
 	import { fly } from 'svelte/transition';
 	import { Palette, type PaletteTuple } from '$lib/Palette';
-	import { uniqueId } from '$lib/tools';
+	import { link, uniqueId } from '$lib/tools';
 	import ColorThief from 'colorthief';
 	import { onMount } from 'svelte';
+
+	type ProjectAction = { url: string; text: string; disabled?: boolean };
 
 	export let tittle = 'Tittle'; // Project Tittle
 	export let description = 'Description'; // Project Description Text
 	export let imageSource = '/images/toph-cc.png'; // Project Image Source
-	export let action: { url: string; text: string }; // Project Action Button, Optional
+	export let actions: ProjectAction[]; // Project Action Button, Optional
 
 	const imageId = uniqueId();
 
@@ -56,7 +58,7 @@
 
 {#await getArticleVars() then vars}
 	<article
-		class="card"
+		class="card variant-soft"
 		class:landscape
 		style={vars}
 		bind:clientWidth={currentWidth}
@@ -78,9 +80,13 @@
 				<div class="card-description">
 					{description}
 				</div>
-				{#if action && action.url && action.text}
+				{#if actions}
 					<div class="card-actions">
-						<a class="variant-soft btn text-lg" href={action.url}> {action.text} </a>
+						{#each actions as action}
+							<button class="variant-soft btn" disabled={action.disabled} use:link={action.url}>
+								{action.text}
+							</button>
+						{/each}
 					</div>
 				{/if}
 			</div>
@@ -99,9 +105,13 @@
 					alt="screenshot of the project"
 				/>
 			</div>
-			{#if action && action.url && action.text}
+			{#if actions}
 				<div class="card-actions">
-					<a class="variant-soft btn" href={action.url}> {action.text} </a>
+					{#each actions as action}
+						<button class="variant-soft btn" disabled={action.disabled} use:link={action.url}>
+							{action.text}
+						</button>
+					{/each}
 				</div>
 			{/if}
 		{/if}
@@ -113,10 +123,6 @@
 		@apply flex flex-col gap-4 p-4;
 		background-color: var(--palette-primary);
 		color: var(--palette-on-primary);
-
-		&.placeholder {
-			background-color: rgba(var(--color-surface-500) / 0.5);
-		}
 	}
 
 	article.landscape {
@@ -151,11 +157,17 @@
 	}
 
 	.card-actions {
-		@apply flex w-full items-center justify-end;
+		@apply flex w-full items-center justify-end gap-4;
 	}
 
 	.btn {
-		background-color: var(--palette-secondary);
-		color: var(--palette-on-secondary);
+		background-color: var(--palette-tertiary);
+		color: var(--palette-on-tertiary);
+
+		&:last-child,
+		&:only-child {
+			background-color: var(--palette-secondary);
+			color: var(--palette-on-secondary);
+		}
 	}
 </style>

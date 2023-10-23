@@ -26,3 +26,12 @@ export function copy(node: Node, string: string) {
 			});
 	});
 }
+
+/**
+ * Attaches a click event listener to a given node that navigates to the specified URL when clicked.
+ * @param node - The node to attach the event listener to. Only needed to use as a svelte directive.
+ * @param url - The URL to navigate to when the node is clicked.
+ */
+export function link(node: Node, url: string) {
+	node.addEventListener('click', () => (location.href = url));
+}
