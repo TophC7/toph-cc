@@ -10,6 +10,7 @@ export const EMPTY_PALETTE: PaletteTuple = [
 	[0, 0, 0],
 	[0, 0, 0]
 ];
+const DEFAULT_BRIGHTNESS_SHIFT = 50;
 
 /**
  * Represents a color palette with primary, secondary, and tertiary colors, as well as on-color variants of each.
@@ -39,11 +40,13 @@ export class Palette {
 	 * @param palette - A tuple of three arrays, each containing RGB values for the primary, secondary, and tertiary colors.
 	 */
 	constructor(palette: PaletteTuple) {
-		this.primary = tinycolor({ r: palette[0][0], g: palette[0][1], b: palette[0][2] });
-		this.secondary = tinycolor({ r: palette[1][0], g: palette[1][1], b: palette[2][2] });
-		this.tertiary = tinycolor({ r: palette[2][0], g: palette[2][1], b: palette[2][2] });
+		const [primary, secondary, tertiary] = palette;
 
-		this.initializeOnColors(50);
+		this.primary = tinycolor({ r: primary[0], g: primary[1], b: primary[2] }).saturate();
+		this.secondary = tinycolor({ r: secondary[0], g: secondary[1], b: secondary[2] }).saturate();
+		this.tertiary = tinycolor({ r: tertiary[0], g: tertiary[1], b: tertiary[2] }).saturate();
+
+		this.initializeOnColors(DEFAULT_BRIGHTNESS_SHIFT);
 	}
 
 	/**
@@ -83,7 +86,7 @@ export class Palette {
 		temp.l = isDark ? 30 : 70;
 		this.tertiary = new tinycolor(temp);
 
-		this.initializeOnColors(50);
+		this.initializeOnColors(DEFAULT_BRIGHTNESS_SHIFT);
 		this.primary.setAlpha(alpha);
 		this.secondary.setAlpha(alpha);
 		this.tertiary.setAlpha(alpha);
