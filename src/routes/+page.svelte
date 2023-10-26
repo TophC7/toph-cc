@@ -21,8 +21,19 @@
 			description: `A game statistics web app using Next.js and TailwindCSS that lets players easily check out their in-game stats directly from Riot's API. Built in collaboration with ${cesarAmaroLink}, our goal is to make it user-friendly, responsive and visually appealing.`,
 			imageSource: '/images/morgana-nt.png',
 			actions: [
-				{ url: '/', text: 'Live Soon', disabled: true },
-				{ url: 'https://github.com/cesaramaro/leaguestats', text: 'GitHub' }
+				{ url: 'https://github.com/cesaramaro/leaguestats', text: 'GitHub' },
+				{ url: '/', text: 'Live Soon', disabled: true }
+			]
+		},
+		{
+			title: 'Project Starters',
+			description:
+				'Template Projects for Svelte and Next.js with sensible configurations for components and dev environment.',
+			imageSource: '/images/svelte.png',
+			actions: [
+				{ url: 'https://github.com/tophc7/starter-svelte-daisyui', text: 'SvelteKit' },
+				{ url: 'https://github.com/tophc7/starter-nextjs-daisyui', text: 'Next.js' },
+				{ url: 'https://svelte.toph.cc', text: 'Live' }
 			]
 		},
 		{
@@ -31,8 +42,8 @@
 				'A random website about Kiwis. Created to look like a 2017 High school project with questionable Styling and Colors.',
 			imageSource: '/images/kiwi-site.jpeg',
 			actions: [
-				{ url: 'https://kiwi.toph.cc', text: 'Live' },
-				{ url: 'https://github.com/TophC7/kiwi-site', text: 'GitHub' }
+				{ url: 'https://github.com/TophC7/kiwi-site', text: 'GitHub' },
+				{ url: 'https://kiwi.toph.cc', text: 'Live' }
 			]
 		},
 		{
