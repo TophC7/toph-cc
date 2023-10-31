@@ -21,5 +21,5 @@
     "node_modules": true
   },
   "prettier.documentSelectors": ["**/*.svelte"],
-  "cSpell.words": ["colorthief"]
+  "cSpell.words": ["colorthief", "tinacms"]
 }

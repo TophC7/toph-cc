@@ -1,18 +1,18 @@
 {
   "name": "nerf-this",
   "version": "0.0.1",
+  "type": "module",
   "engines": {
     "node": ">=16"
   },
   "scripts": {
-    "build": "vite build",
-    "build-dev": "vite build",
+    "build": "tinacms build && vite build",
     "check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
     "check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
-    "dev": "vite dev",
+    "dev": "tinacms dev -c 'vite dev'",
     "format": "prettier --plugin-search-dir . --write .",
     "lint": "prettier --plugin-search-dir . --check . && eslint .",
-    "preview": "vite preview",
+    "preview": "tinacms build && vite preview",
     "clean": "rm -rf ./node_modules ./dist ./svelte-kit"
   },
   "devDependencies": {
@@ -36,21 +36,27 @@
     "colorthief": "^2.4.0",
     "cross-env": "^7.0.3",
     "dotenv": "^16.3.1",
+    "eslint": "^8.52.0",
     "eslint-config-prettier": "^9.0.0",
     "eslint-plugin-svelte": "^2.34.0",
-    "eslint": "^8.52.0",
-    "postcss-load-config": "^4.0.1",
     "postcss": "^8.4.31",
+    "postcss-load-config": "^4.0.1",
+    "prettier": "^3.0.3",
     "prettier-plugin-svelte": "^3.0.3",
     "prettier-plugin-tailwindcss": "^0.5.6",
-    "prettier": "^3.0.3",
+    "svelte": "^4.2.2",
     "svelte-check": "^3.5.2",
     "svelte-sequential-preprocessor": "^2.0.1",
-    "svelte": "^4.2.2",
     "tailwindcss": "^3.3.3",
     "tslib": "^2.4.1",
     "typescript": "^5.0.0",
     "vite": "^4.5.0"
   },
-  "type": "module"
+  "dependencies": {
+    "@tinacms/cli": "^1.5.31",
+    "tinacms": "^1.5.22"
+  },
+  "overrides": {
+    "graphql": "^16.8.1"
+  }
 }
