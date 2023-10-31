@@ -1,15 +1,15 @@
 {
-	// See https://go.microsoft.com/fwlink/?LinkId=733558
-	// for the documentation about the tasks.json format
-	"version": "2.0.0",
-	"tasks": [
-		{
-			"label": "bun",
-			"type": "shell",
-			"command": "bun --bun run --hot dev",
-			"runOptions": {
-				"runOn": "folderOpen"
-			}
-		}
-	]
+  // See https://go.microsoft.com/fwlink/?LinkId=733558
+  // for the documentation about the tasks.json format
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "bun",
+      "type": "shell",
+      "command": "bun --bun run --hot dev",
+      "runOptions": {
+        "runOn": "folderOpen"
+      }
+    }
+  ]
 }

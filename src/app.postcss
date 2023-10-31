@@ -1,0 +1,19 @@
+/* Write your global styles here, in PostCSS syntax */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://api.fontshare.com/v2/css?f[]=satoshi@900,700,500,301,701,300,501,401,901,400&display=swap');
+@import url('https://api.fontshare.com/v2/css?f[]=alpino@300,400,100,700,900,500&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body {
+  @apply m-0 h-full min-h-full overflow-hidden font-Alpino;
+  background-image: radial-gradient(at 100% 150%, rgba(var(--color-primary-500) / 0.25) 50px, transparent 70%);
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-size: 18px;
+}
