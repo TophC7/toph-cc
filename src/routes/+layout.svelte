@@ -1,12 +1,20 @@
 <script lang="ts">
-  import { AppShell, Toast, initializeStores } from '@skeletonlabs/skeleton';
+  import { AppShell, Modal, Toast, initializeStores, type ModalComponent } from '@skeletonlabs/skeleton';
   import Footer from './Footer.svelte';
   import Header from './Header.svelte';
   import '../app.postcss';
+  import { LoginModal } from '$components';
 
   initializeStores();
+
+  // Register custom modals here
+  const modalRegistry: Record<string, ModalComponent> = {
+    // Set a unique modal ID, then pass the component reference
+    LoginModal: { ref: LoginModal }
+  };
 </script>
 
+<Modal components={modalRegistry} />
 <Toast padding="p-3" />
 
 <AppShell>
