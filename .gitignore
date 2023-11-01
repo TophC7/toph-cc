@@ -1,14 +1,14 @@
-!.env.example
 .DS_Store
 .env
 .env.*
+!.env.example
 .vercel
 .output
+service-account.json
 vite.config.js.timestamp-*
 vite.config.ts.timestamp-*
 
 # folders
-/.firebase
 /.svelte-kit
 /build
 /node_modules
@@ -19,3 +19,9 @@ package-lock.json
 pnpm-lock.yaml
 yarn.lock
 bun.lockb
+
+#firebase
+.firebase
+firestore.indexes.json
+firestore.rules
+storage.rules
