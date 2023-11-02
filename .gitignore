@@ -16,7 +16,7 @@ vite.config.ts.timestamp-*
 
 # lock files
 package-lock.json
-pnpm-lock.yaml
+# pnpm-lock.yaml
 yarn.lock
 bun.lockb
 
