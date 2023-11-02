@@ -11,10 +11,7 @@
 
   let currentWidth: number;
   let landscape: boolean;
-  const setLandscape = () => {
-    landscape = currentWidth >= 1280;
-  };
-  $: currentWidth && setLandscape();
+  $: landscape = currentWidth >= 1280;
 </script>
 
 <!-- TODO: Add ability for multiple images -->
