@@ -1,7 +1,6 @@
 <script lang="ts">
   import { AppShell, Modal, Toast, initializeStores, type ModalComponent } from '@skeletonlabs/skeleton';
-  import Footer from './Footer.svelte';
-  import Header from './Header.svelte';
+  import { Footer, Header } from '$components/Layout';
   import '../app.postcss';
   import { LoginModal } from '$components';
 

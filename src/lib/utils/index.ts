@@ -1,5 +1,6 @@
 import type { CustomThemeConfig } from '@skeletonlabs/tw-plugin';
 import type Palette from './Palette';
+import type { ToastStore } from '@skeletonlabs/skeleton';
 
 export { default as Palette } from './Palette';
 
@@ -31,6 +32,32 @@ export function copy(node: Node, string: string) {
       });
   });
 }
+
+/**
+ * Returns an object with two functions to handle copy events.
+ * @param toastStore - The toast store to trigger toast messages.
+ * @returns An object with two functions: handleCopyError and handleCopySuccess.
+ */
+export const clipboardEventHandler = (toastStore: ToastStore) => {
+  return {
+    handleCopyError: function () {
+      toastStore.trigger({
+        message: "Couldn't copy email to clipboard ☹️",
+        background: 'variant-filled-error',
+        hideDismiss: true,
+        timeout: 3000
+      });
+    },
+    handleCopySuccess: function () {
+      toastStore.trigger({
+        message: 'Email copied to clipboard!',
+        background: 'variant-filled-success',
+        hideDismiss: true,
+        timeout: 3000
+      });
+    }
+  };
+};
 
 /**
  * Attaches a click event listener to a given node that navigates to the specified URL when clicked.

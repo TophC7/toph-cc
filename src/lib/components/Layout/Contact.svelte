@@ -1,36 +1,19 @@
 <script lang="ts">
   import { Tooltip } from '$components';
   import { Fa } from '$lib';
-  import { copy, link, linkOut } from '$lib/utils';
+  import { clipboardEventHandler, copy, link, linkOut } from '$lib/utils';
   import { faGithubAlt, faLinkedin } from '@fortawesome/free-brands-svg-icons';
   import { faEnvelope, faFilePdf } from '@fortawesome/free-solid-svg-icons';
   import { getToastStore } from '@skeletonlabs/skeleton';
   import { slide } from 'svelte/transition';
 
   const toastStore = getToastStore();
+  const copyHandler = clipboardEventHandler(toastStore);
   const email = 'chris@toph.cc';
 
   let contactOpen = false;
   function handleClick() {
     contactOpen = !contactOpen;
-  }
-
-  function handleCopyError() {
-    toastStore.trigger({
-      message: "Couldn't copy email to clipboard ☹️",
-      background: 'variant-filled-error',
-      hideDismiss: true,
-      timeout: 3000
-    });
-  }
-
-  function handleCopySuccess() {
-    toastStore.trigger({
-      message: 'Email copied to clipboard!',
-      background: 'variant-filled-success',
-      hideDismiss: true,
-      timeout: 3000
-    });
   }
 </script>
 
@@ -48,7 +31,10 @@
         </button>
       </Tooltip>
       <Tooltip text="Email" position="bottom">
-        <button use:copy={email} on:copySuccess={handleCopySuccess} on:copyError={handleCopyError}>
+        <button
+          use:copy={email}
+          on:copySuccess={copyHandler.handleCopySuccess}
+          on:copyError={copyHandler.handleCopyError}>
           <Fa icon={faEnvelope} class="contactIcon" />
         </button>
       </Tooltip>
