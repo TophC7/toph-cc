@@ -54,7 +54,7 @@
     @apply variant-soft-surface btn-group-vertical backdrop-blur text-on-surface-token;
     background-color: rgb(var(--color-surface-500) / 0.6) !important;
     & > button {
-      @apply flex justify-start gap-2;
+      @apply flex justify-start gap-4 text-xl;
     }
   }
 </style>
