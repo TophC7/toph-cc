@@ -1,52 +1,52 @@
 <script lang="ts">
-	export let position: 'top' | 'bottom' | 'left' | 'right' = 'top';
-	export let text: string = '';
+  export let position: 'top' | 'bottom' | 'left' | 'right' = 'top';
+  export let text: string = '';
 
-	let tooltipVisible = false;
+  let tooltipVisible = false;
 
-	function handleMouse() {
-		tooltipVisible = !tooltipVisible;
-	}
+  function handleMouse() {
+    tooltipVisible = !tooltipVisible;
+  }
 </script>
 
-<div
-	class="tooltip-container"
-	role="tooltip"
-	on:mouseenter={handleMouse}
-	on:mouseleave={handleMouse}
->
-	{#if tooltipVisible}
-		<div class={`tooltip tooltip-${position}`}>{text}</div>
-	{/if}
+<div class="tooltip-container" role="tooltip" on:mouseenter={handleMouse} on:mouseleave={handleMouse}>
+  {#if tooltipVisible}
+    <p class={`tooltip tooltip-${position}`}>{text}</p>
+  {/if}
 
-	<slot />
+  <slot />
 </div>
 
 <style>
-	.tooltip-container {
-		position: relative;
-		display: inherit;
-	}
+  .tooltip-container {
+    position: relative;
+    display: inherit;
+  }
 
-	.tooltip {
-		@apply absolute z-10 bg-primary-50 p-1 text-sm leading-none ring-inset ring-primary-500 text-on-primary-token;
-		box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);
-		border-radius: var(--theme-rounded-container);
-	}
+  .tooltip {
+    @apply variant-soft absolute z-10 w-max max-w-[8rem] p-1 text-sm leading-none ring-inset ring-primary-500 backdrop-blur text-on-surface-token;
+    box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);
+    border-radius: var(--theme-rounded-container);
+    background-color: rgb(var(--color-surface-500) / 0.6) !important;
+  }
 
-	.tooltip-top {
-		@apply bottom-[120%] left-1/2 translate-x-[-50%];
-	}
+  .tooltip-top {
+    @apply left-1/2 translate-x-[-50%];
+    bottom: calc(100% + 0.75rem);
+  }
 
-	.tooltip-bottom {
-		@apply left-1/2 top-[120%] translate-x-[-50%];
-	}
+  .tooltip-bottom {
+    @apply left-1/2 translate-x-[-50%];
+    top: calc(100% + 0.75rem);
+  }
 
-	.tooltip-left {
-		@apply right-[120%] top-1/2 translate-y-[-50%];
-	}
+  .tooltip-left {
+    @apply top-1/2 translate-y-[-50%];
+    right: calc(100% + 0.75rem);
+  }
 
-	.tooltip-right {
-		@apply left-[120%] top-1/2 translate-y-[-50%];
-	}
+  .tooltip-right {
+    @apply top-1/2 translate-y-[-50%];
+    left: calc(100% + 0.75rem);
+  }
 </style>

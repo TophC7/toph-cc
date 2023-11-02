@@ -48,7 +48,7 @@
         </button>
       </Tooltip>
       <Tooltip text="Email" position="bottom">
-        <button class="flex" use:copy={email} on:copySuccess={handleCopySuccess} on:copyError={handleCopyError}>
+        <button use:copy={email} on:copySuccess={handleCopySuccess} on:copyError={handleCopyError}>
           <Fa icon={faEnvelope} class="contactIcon" />
         </button>
       </Tooltip>
@@ -73,7 +73,7 @@
   }
 
   .iconWrapper {
-    @apply flex flex-row items-center gap-2 bg-primary-400 bg-opacity-30 px-3;
+    @apply flex flex-row items-center gap-3 bg-primary-400 bg-opacity-30 px-3;
   }
 
   /* Border Radius Right */
