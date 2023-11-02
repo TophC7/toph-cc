@@ -6,13 +6,13 @@
     "node": ">=16"
   },
   "scripts": {
-    "build": "tinacms build && vite build",
+    "build": "vite build",
     "check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
     "check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
-    "dev": "tinacms dev -c 'vite dev'",
+    "dev": "vite dev",
     "format": "prettier --plugin-search-dir . --write .",
     "lint": "prettier --plugin-search-dir . --check . && eslint .",
-    "preview": "tinacms build && vite preview",
+    "preview": "vite preview",
     "clean": "rm -rf ./node_modules ./dist ./svelte-kit"
   },
   "devDependencies": {
