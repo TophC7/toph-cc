@@ -11,12 +11,30 @@
     {
       "label": "Start dev server pnpm",
       "type": "shell",
-      "command": "pnpm run dev"
+      "command": "pnpm run dev",
+      "runOptions": {
+        "runOn": "folderOpen"
+      }
     },
     {
       "label": "Start dev server bun",
       "type": "shell",
-      "command": "bun --bun run --hot dev",
+      "command": "bun --bun run --hot dev"
+    },
+    {
+      "label": "Launch Edge against localhost",
+      "type": "process",
+      "command": "powershell.exe",
+      "args": ["-c", "msedge.exe", "--remote-debugging-port=9222", "http://localhost:4000"],
+      "isBackground": true,
+      "presentation": {
+        "echo": true,
+        "reveal": "silent",
+        "focus": false,
+        "panel": "shared",
+        "showReuseMessage": false,
+        "clear": true
+      },
       "runOptions": {
         "runOn": "folderOpen"
       }

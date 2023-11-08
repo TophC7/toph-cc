@@ -1,11 +1,4 @@
 {
-  "auto-run-command.rules": [
-    {
-      "command": "browse-lite.open",
-      "condition": "always",
-      "message": "Open Browser"
-    }
-  ],
   "browse-lite.startUrl": "http://localhost:4000/",
   "explorer.compactFolders": false,
   "explorer.fileNesting.enabled": true,
