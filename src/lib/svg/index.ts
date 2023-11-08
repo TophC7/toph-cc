@@ -1,0 +1,10 @@
+export { default as Code } from './code.svg?component';
+export { default as Croissant } from './croissant.svg?component';
+export { default as Ellipsis } from './ellipsis.svg?component';
+export { default as Envelope } from './envelope.svg?component';
+export { default as GitHub } from './github.svg?component';
+export { default as Home } from './home.svg?component';
+export { default as Linkedin } from './linkedin.svg?component';
+export { default as PDF } from './pdf.svg?component';
+export { default as Pen } from './pen.svg?component';
+export { default as Quotes } from './quotes.svg?component';
