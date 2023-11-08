@@ -1,10 +1,13 @@
 <script lang="ts">
-  import { AppShell, Modal, Toast, initializeStores, type ModalComponent } from '@skeletonlabs/skeleton';
-  import { Footer, Header } from '$components/Layout';
+  import { LoginModal, SideNav } from '$components';
+  import BottomNav from '$components/Nav/BottomNav.svelte';
+  import { Modal, Toast, initializeStores, type ModalComponent } from '@skeletonlabs/skeleton';
   import '../app.postcss';
-  import { LoginModal } from '$components';
 
   initializeStores();
+
+  let innerWidth: number;
+  $: mobile = innerWidth < 1280;
 
   // Register custom modals here
   const modalRegistry: Record<string, ModalComponent> = {
@@ -13,23 +16,19 @@
   };
 </script>
 
+<svelte:window bind:innerWidth />
+
 <Modal components={modalRegistry} />
 <Toast padding="p-3" />
 
-<AppShell>
-  <svelte:fragment slot="header">
-    <Header />
-  </svelte:fragment>
-  <!-- (sidebarLeft) -->
-  <!-- (sidebarRight) -->
-  <!-- (pageHeader) -->
-  <!-- Router Slot -->
-  <main class="mx-auto flex max-w-7xl flex-col px-8 transition-all ease-linear xl:p-0">
+<div class="flex h-screen w-screen flex-row justify-center gap-4 overflow-auto p-4">
+  {#if !mobile}
+    <SideNav />
+  {/if}
+  <main class="z-0 h-full w-full max-w-7xl">
     <slot />
+    {#if mobile}
+      <BottomNav />
+    {/if}
   </main>
-  <!-- ---- / ---- -->
-  <svelte:fragment slot="pageFooter">
-    <Footer />
-  </svelte:fragment>
-  <!-- (footer) -->
-</AppShell>
+</div>

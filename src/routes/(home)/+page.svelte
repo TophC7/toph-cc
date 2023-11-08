@@ -1,5 +1,6 @@
 <script lang="ts">
-  import { ArrayFormat, Project } from '$lib/components';
+  import { ArrayFormat } from '$components/utils';
+  import { Project } from '$lib/components';
 
   const techs = ['Fhir', 'Keycloak', 'Spring', 'Next.js', 'Svelte', 'Tailwind', 'Docker', 'Google Cloud'];
 

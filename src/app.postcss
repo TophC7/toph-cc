@@ -13,6 +13,10 @@
   }
 }
 
+:root {
+  --base-alpha: 0.6;
+}
+
 html,
 body {
   @apply m-0 h-full min-h-full overflow-hidden font-Alpino;
@@ -22,4 +26,39 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   font-size: 18px;
+}
+
+.variant-blur-primary {
+  @apply variant-soft-primary backdrop-blur;
+  background-color: rgba(var(--color-primary-500) / var(--base-alpha));
+}
+
+.variant-blur-secondary {
+  @apply variant-soft-secondary backdrop-blur;
+  background-color: rgba(var(--color-secondary-500) / var(--base-alpha));
+}
+
+.variant-blur-tertiary {
+  @apply variant-soft-tertiary backdrop-blur;
+  background-color: rgba(var(--color-tertiary-500) / var(--base-alpha));
+}
+
+.variant-blur-surface {
+  @apply variant-soft-surface backdrop-blur;
+  background-color: rgba(var(--color-surface-500) / var(--base-alpha));
+}
+
+.variant-blur-warning {
+  @apply variant-soft-warning backdrop-blur;
+  background-color: rgba(var(--color-warning-500) / var(--base-alpha));
+}
+
+.variant-blur-success {
+  @apply variant-soft-success backdrop-blur;
+  background-color: rgba(var(--color-success-500) / var(--base-alpha));
+}
+
+.variant-blur-error {
+  @apply variant-soft-error backdrop-blur;
+  background-color: rgba(var(--color-error-500) / var(--base-alpha));
 }

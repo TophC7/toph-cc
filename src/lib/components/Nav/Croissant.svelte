@@ -1,5 +1,5 @@
 <script lang="ts">
-  import Croissant from '$svg/crosissant.svg?component';
+  import { Croissant } from '$svg';
   import { getModalStore, type ModalSettings } from '@skeletonlabs/skeleton';
 
   const modalStore = getModalStore();
@@ -20,20 +20,15 @@
   }
 </script>
 
-<button class="spin" on:mousedown={handleHold} on:mouseup={handleRelease}>
-  <Croissant class="h-6 w-6 text-primary-500" />
+<button on:mousedown={handleHold} on:mouseup={handleRelease}>
+  <Croissant class="text-primary-500" height="2rem" />
 </button>
 
 <style lang="postcss">
-  .spin {
+  button {
+    @apply flex aspect-square w-full items-center justify-center;
     &:active {
-      animation: spin 1s linear infinite;
-    }
-  }
-
-  @keyframes spin {
-    100% {
-      -webkit-transform: rotate(360deg);
+      @apply animate-spin duration-200;
     }
   }
 </style>

@@ -15,6 +15,9 @@ const config = {
         Inter: ['Inter', 'Satoshi', 'Alpino', 'sans-serif'],
         Satoshi: ['Satoshi', 'Inter', 'Alpino', 'sans-serif'],
         Alpino: ['Alpino', 'Inter', 'Satoshi', 'sans-serif']
+      },
+      borderRadius: {
+        base: 'var(--theme-rounded-container)'
       }
     }
   },
