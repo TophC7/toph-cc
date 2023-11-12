@@ -10,7 +10,7 @@
   const EMAIL = 'chris@toph.cc';
   const tooltipProps: App.TooltipProps = {
     text: 'Copy email',
-    color: 'warning',
+    color: 'surface',
     position: tooltipPosition
   };
 </script>

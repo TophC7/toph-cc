@@ -29,15 +29,25 @@
   }
 
   function getPosition() {
+    const distance = '0.5rem';
+    let top, left;
     switch (position) {
       case 'top':
-        return `top: ${anchorPosition.top}px; left: ${anchorPosition.left}px;`;
+        top = anchorPosition.top;
+        left = anchorPosition.left + anchorPosition.width / 2;
+        return `top: calc(${top}px - ${distance}); left: ${left}px; transform: translateX(-50%) translateY(-100%);`;
       case 'bottom':
-        return `bottom: ${anchorPosition.bottom + 8}px; left: ${anchorPosition.left + anchorPosition.width / 2}px;}`;
+        top = anchorPosition.top + anchorPosition.height;
+        left = anchorPosition.left + anchorPosition.width / 2;
+        return `top: calc(${top}px + ${distance}); left: ${left}px; transform: translateX(-50%);`;
       case 'left':
-        return `left: ${anchorPosition.left - 8}px; top: ${anchorPosition.top + anchorPosition.height / 2}px;`;
+        top = anchorPosition.top + anchorPosition.height / 2;
+        left = anchorPosition.left;
+        return `top: ${top}px; left: calc(${left}px - ${distance}); transform: translateX(-100%) translateY(-50%);`;
       case 'right':
-        return `right: ${anchorPosition.right + 8}px; top: ${anchorPosition.top + anchorPosition.height / 2}px;`;
+        top = anchorPosition.top + anchorPosition.height / 2;
+        left = anchorPosition.left + anchorPosition.width;
+        return `top: ${top}px; left: calc(${left}px + ${distance}); transform: translateY(-50%);`;
     }
   }
 </script>
@@ -48,7 +58,7 @@
 
 <style>
   .tooltip {
-    @apply fixed z-[60] max-w-[8rem] rounded-base p-1 leading-none ring-inset;
+    @apply fixed z-[60] m-0 max-w-[8rem] rounded-base p-1 leading-none ring-inset;
     box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);
   }
 </style>

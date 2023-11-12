@@ -9,14 +9,14 @@ function tooltipStore() {
 
   /**
    * Sets the tooltip properties triggering the tooltip component.
-   * @param props - The tooltip options to set.
+   * @param props - The tooltip properties
    */
   function trigger(props: App.TooltipProps) {
     set(props);
   }
 
   /**
-   * Sets the store value to null.
+   * Sets the store value to null. Effectively blurring/hiding the tooltip.
    */
   function blur() {
     set(null);
