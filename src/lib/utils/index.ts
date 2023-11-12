@@ -59,7 +59,7 @@ export function linkOut(node: Node, url?: string) {
   if (url) {
     node.addEventListener('click', (event: Event) => {
       event.preventDefault();
-      window.open(url, '_blank', 'noopener noreferrer');
+      window.open(url, '_blank', 'noopener');
     });
   }
 }
