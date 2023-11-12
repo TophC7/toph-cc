@@ -2,17 +2,11 @@ import type { CustomThemeConfig } from '@skeletonlabs/tw-plugin';
 import type Palette from './Palette';
 import type { ToastStore } from '@skeletonlabs/skeleton';
 
+// FOLDER EXPORTS //
+
 export { default as Palette } from './Palette';
 
-/**
- * Generates a unique ID string by combining the current timestamp and a random string.
- * @returns A unique ID string.
- */
-export function uniqueId(): string {
-  const dateString = Date.now().toString(36);
-  const randomness = Math.random().toString(36).substr(2);
-  return dateString + randomness;
-}
+// USE:DIRECTIVES //
 
 /**
  * Copies the given string to the clipboard when the provided node is clicked.
@@ -31,6 +25,41 @@ export function copy(node: Node, string: string) {
         node.dispatchEvent(new CustomEvent('copyError'));
       });
   });
+}
+
+/**
+ * Attaches a click event listener to a given node that navigates to the specified URL when clicked.
+ * @param node - The node to attach the event listener to. Only needed to use as a svelte directive.
+ * @param url - The URL to navigate to when the node is clicked.
+ */
+export function link(node: Node, url: string) {
+  node.addEventListener('click', () => (location.href = url));
+}
+
+/**
+ * Attaches a click event listener to a given node that opens a URL in a new tab when clicked.
+ * @param node - The node to attach the event listener to.
+ * @param url - The URL to open in a new tab. If not provided, no event listener is attached.
+ */
+export function linkOut(node: Node, url?: string) {
+  if (url) {
+    node.addEventListener('click', (event: Event) => {
+      event.preventDefault();
+      window.open(url, '_blank', 'noopener noreferrer');
+    });
+  }
+}
+
+// UTILS //
+
+/**
+ * Generates a unique ID string by combining the current timestamp and a random string.
+ * @returns A unique ID string.
+ */
+export function uniqueId(): string {
+  const dateString = Date.now().toString(36);
+  const randomness = Math.random().toString(36).substr(2);
+  return dateString + randomness;
 }
 
 /**
@@ -60,23 +89,10 @@ export const clipboardEventHandler = (toastStore: ToastStore) => {
 };
 
 /**
- * Attaches a click event listener to a given node that navigates to the specified URL when clicked.
- * @param node - The node to attach the event listener to. Only needed to use as a svelte directive.
- * @param url - The URL to navigate to when the node is clicked.
+ * Returns a string of CSS variables from a given palette object.
+ * @param palette - The palette object to generate CSS variables from.
+ * @returns A string of CSS variables.
  */
-export function link(node: Node, url: string) {
-  node.addEventListener('click', () => (location.href = url));
-}
-
-/**
- * Attaches an event listener to a DOM node that opens a URL in a new tab when clicked.
- * @param node - The DOM node to attach the event listener to. Only needed to use as a svelte directive.
- * @param url - The URL to open in a new tab.
- */
-export function linkOut(node: Node, url: string) {
-  node.addEventListener('click', () => window.open(url, '_blank', 'noopener noreferrer'));
-}
-
 export function cssVarsFromPalette(palette: Palette) {
   const vars = [
     `--p: ${palette.primary.toHslString()}`,
@@ -92,6 +108,8 @@ export function cssVarsFromPalette(palette: Palette) {
 
   return vars;
 }
+
+// SKELETON: THEME //
 
 export const croissant: CustomThemeConfig = {
   name: 'croissant',
