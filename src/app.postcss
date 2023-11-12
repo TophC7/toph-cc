@@ -13,8 +13,10 @@
   }
 }
 
+/* APP CONSTANTS Found in $lib as well */
 :root {
   --base-alpha: 0.6;
+  --mobile-width: 1024px;
 }
 
 html,
@@ -30,32 +32,32 @@ body {
 
 .variant-blur-primary {
   @apply variant-soft-primary backdrop-blur;
-  background-color: rgba(var(--color-primary-500) / var(--base-alpha));
+  background-color: rgba(var(--color-primary-500) / var(--base-alpha)) !important;
 }
 
 .variant-blur-secondary {
   @apply variant-soft-secondary backdrop-blur;
-  background-color: rgba(var(--color-secondary-500) / var(--base-alpha));
+  background-color: rgba(var(--color-secondary-500) / var(--base-alpha)) !important;
 }
 
 .variant-blur-tertiary {
   @apply variant-soft-tertiary backdrop-blur;
-  background-color: rgba(var(--color-tertiary-500) / var(--base-alpha));
+  background-color: rgba(var(--color-tertiary-500) / var(--base-alpha)) !important;
 }
 
 .variant-blur-surface {
   @apply variant-soft-surface backdrop-blur;
-  background-color: rgba(var(--color-surface-500) / var(--base-alpha));
+  background-color: rgba(var(--color-surface-500) / var(--base-alpha)) !important;
 }
 
 .variant-blur-warning {
   @apply variant-soft-warning backdrop-blur;
-  background-color: rgba(var(--color-warning-500) / var(--base-alpha));
+  background-color: rgba(var(--color-warning-500) / var(--base-alpha)) !important;
 }
 
 .variant-blur-success {
   @apply variant-soft-success backdrop-blur;
-  background-color: rgba(var(--color-success-500) / var(--base-alpha));
+  background-color: rgba(var(--color-success-500) / var(--base-alpha)) !important;
 }
 
 .variant-blur-error {
