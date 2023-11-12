@@ -1,20 +1,25 @@
 <script lang="ts">
-  import { Tooltip } from '$components/utils';
-  import { clipboardEventHandler, copy } from '$lib/utils';
   import { Envelope } from '$svg';
+  import { clipboardEventHandler, copy, tooltip } from '$utils';
   import { getToastStore } from '@skeletonlabs/skeleton';
+
+  export let tooltipPosition: App.Position = 'bottom';
 
   const toastStore = getToastStore();
   const copyHandler = clipboardEventHandler(toastStore);
   const EMAIL = 'chris@toph.cc';
+  const tooltipProps: App.TooltipProps = {
+    text: 'Copy email',
+    color: 'warning',
+    position: tooltipPosition
+  };
 </script>
 
-<Tooltip text="Copy Email" position="right">
-  <button
-    use:copy={EMAIL}
-    on:copySuccess={copyHandler.handleCopySuccess}
-    on:copyError={copyHandler.handleCopyError}
-    class="variant-blur-surface btn-icon aspect-square w-full rounded-base group-hover:rounded-3xl">
-    <Envelope width="1.5rem" />
-  </button>
-</Tooltip>
+<button
+  class="variant-blur-surface btn-icon aspect-square w-full rounded-base group-hover:rounded-3xl"
+  use:copy={EMAIL}
+  on:copySuccess={copyHandler.handleCopySuccess}
+  on:copyError={copyHandler.handleCopyError}
+  use:tooltip={tooltipProps}>
+  <Envelope height="60%" />
+</button>

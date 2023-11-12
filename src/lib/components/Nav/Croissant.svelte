@@ -21,7 +21,7 @@
 </script>
 
 <button on:mousedown={handleHold} on:mouseup={handleRelease}>
-  <Croissant class="text-primary-500" height="2rem" />
+  <Croissant class="text-primary-500" height="80%" />
 </button>
 
 <style lang="postcss">

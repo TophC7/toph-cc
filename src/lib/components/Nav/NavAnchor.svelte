@@ -1,23 +1,32 @@
 <script lang="ts">
-  import { Link, Tooltip } from '$components/utils';
+  import { linkOut, tooltip } from '$utils';
 
-  export let SVG: App.SVGC;
+  let SVG: App.SVGC;
   export let href: string;
-  export let tooltip: string;
+  export let tooltipText: string;
   export let tooltipPosition: App.Position;
   export let color: App.SkeletonColors = 'surface';
   export let selected: boolean = false;
   export let external: boolean = false;
   export { SVG as svg };
 
-  $: currentColor = selected ? color : 'surface';
+  let colorState: App.SkeletonColors = selected ? color : 'surface';
+  let tooltipProps: App.TooltipProps = {
+    text: tooltipText,
+    color: colorState,
+    position: tooltipPosition
+  };
+
+  $: {
+    colorState = selected ? color : 'surface';
+    tooltipProps.color = colorState;
+  }
 </script>
 
-<Tooltip text={tooltip} position={tooltipPosition} color={currentColor}>
-  <Link
-    {href}
-    class="btn-icon aspect-square w-full variant-blur-{currentColor} rounded-base group-hover:rounded-3xl"
-    {external}>
-    <svelte:component this={SVG} height="1.5rem" />
-  </Link>
-</Tooltip>
+<a
+  {href}
+  class="btn-icon aspect-square h-full w-full variant-blur-{colorState} rounded-base"
+  use:linkOut={external ? href : undefined}
+  use:tooltip={tooltipProps}>
+  <svelte:component this={SVG} height="60%" />
+</a>

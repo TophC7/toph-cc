@@ -1,7 +1,7 @@
 <!--
   @component ### Tooltip
   Displays a short message when the user hovers over an element.   
-  The tooltip is a singleton component that is triggered by the use:tooltipEvents directive.
+  The tooltip is a singleton component that is triggered by the use:tooltip directive.
 -->
 <script lang="ts">
   import { storeTooltip } from '$utils/stores';

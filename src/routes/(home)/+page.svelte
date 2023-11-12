@@ -15,43 +15,43 @@
         { url: 'https://github.com/cesaramaro/leaguestats', text: 'GitHub' },
         { url: '/', text: 'Live Soon', disabled: true }
       ]
-    },
-    {
-      title: 'Project Starters',
-      description:
-        'Template Projects for Svelte and Next.js with sensible configurations for components and dev environment.',
-      imageSource: '/images/svelte.png',
-      actions: [
-        { url: 'https://github.com/tophc7/starter-svelte-daisyui', text: 'SvelteKit' },
-        { url: 'https://github.com/tophc7/starter-nextjs-daisyui', text: 'Next.js' },
-        { url: 'https://svelte.toph.cc', text: 'Live' }
-      ]
-    },
-    {
-      title: 'Kiwis',
-      description:
-        'A random website about Kiwis. Created to look like a 2017 High school project with questionable Styling and Colors.',
-      imageSource: '/images/kiwi-site.jpeg',
-      actions: [
-        { url: 'https://github.com/TophC7/kiwi-site', text: 'GitHub' },
-        { url: 'https://kiwi.toph.cc', text: 'Live' }
-      ]
-    },
-    {
-      // TODO: this one really needs more pics
-      title: 'Quizspark',
-      description:
-        'Quiz WebApp to facilitate learning Java within GenSpark with Quizzes, Notes, Flashcards and Forums.',
-      imageSource: '/images/quizspark.jpeg',
-      actions: []
-    },
-    {
-      title: 'Toph.cc',
-      description:
-        'This website! My personal portfolio and experimental site. Explore its different versions over time and see how it has evolved.',
-      imageSource: '/images/toph-cc.png',
-      actions: [{ url: 'https://github.com/TophC7/Personal-Site', text: 'GitHub' }]
     }
+    // {
+    //   title: 'Project Starters',
+    //   description:
+    //     'Template Projects for Svelte and Next.js with sensible configurations for components and dev environment.',
+    //   imageSource: '/images/svelte.png',
+    //   actions: [
+    //     { url: 'https://github.com/tophc7/starter-svelte-daisyui', text: 'SvelteKit' },
+    //     { url: 'https://github.com/tophc7/starter-nextjs-daisyui', text: 'Next.js' },
+    //     { url: 'https://svelte.toph.cc', text: 'Live' }
+    //   ]
+    // },
+    // {
+    //   title: 'Kiwis',
+    //   description:
+    //     'A random website about Kiwis. Created to look like a 2017 High school project with questionable Styling and Colors.',
+    //   imageSource: '/images/kiwi-site.jpeg',
+    //   actions: [
+    //     { url: 'https://github.com/TophC7/kiwi-site', text: 'GitHub' },
+    //     { url: 'https://kiwi.toph.cc', text: 'Live' }
+    //   ]
+    // },
+    // {
+    //   // TODO: this one really needs more pics
+    //   title: 'Quizspark',
+    //   description:
+    //     'Quiz WebApp to facilitate learning Java within GenSpark with Quizzes, Notes, Flashcards and Forums.',
+    //   imageSource: '/images/quizspark.jpeg',
+    //   actions: []
+    // },
+    // {
+    //   title: 'Toph.cc',
+    //   description:
+    //     'This website! My personal portfolio and experimental site. Explore its different versions over time and see how it has evolved.',
+    //   imageSource: '/images/toph-cc.png',
+    //   actions: [{ url: 'https://github.com/TophC7/Personal-Site', text: 'GitHub' }]
+    // }
   ];
 </script>
 
@@ -60,10 +60,10 @@
   <meta name="description" content="My Portfolio" />
 </svelte:head>
 
-<section class="section">
+<section>
   <div>
     <h1
-      class="glow max-w-4xl pb-5 text-4xl font-bold leading-snug text-primary-500 transition-all ease-linear xl:text-5xl">
+      class="glow max-w-4xl pb-4 text-4xl font-bold leading-snug text-primary-500 transition-all ease-linear xl:text-5xl">
       Welcome to my portfolio!<br />
       I'm Chris, a Software Engineer and Web Developer
     </h1>
@@ -80,13 +80,20 @@
   </div>
 </section>
 
-<section class="section">
+<section>
   {#each projects as project}
     <Project {...project} />
   {/each}
 </section>
 
 <style lang="postcss">
+  section {
+    @apply flex flex-col gap-4 pb-4 text-base transition-all ease-linear;
+    @screen xl {
+      @apply text-xl;
+    }
+  }
+
   .glow {
     text-shadow: 0 0 0.8rem rgba(var(--color-primary-700));
     animation: blink linear infinite 5s;
@@ -118,13 +125,6 @@
     }
     60% {
       text-shadow: white;
-    }
-  }
-
-  .section {
-    @apply flex flex-col gap-8 pt-8 text-base transition-all ease-linear;
-    @screen xl {
-      @apply text-xl;
     }
   }
 </style>

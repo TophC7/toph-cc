@@ -16,9 +16,9 @@
    * which will take care of this */
   let Anchors: {
     [key: string]: {
-      svg?: App.SVGC | undefined;
+      svg: App.SVGC;
       href: string;
-      tooltip: string;
+      tooltipText: string;
       tooltipPosition: App.Position;
       color?: App.SkeletonColors | undefined;
       selected?: boolean | undefined;
@@ -29,7 +29,7 @@
     Home: {
       href: '/',
       svg: Home,
-      tooltip: 'Home',
+      tooltipText: 'Home',
       tooltipPosition: 'right',
       color: 'primary',
       selected: currentPage === '/'
@@ -37,7 +37,7 @@
     Projects: {
       href: '/projects',
       svg: Code,
-      tooltip: 'Projects',
+      tooltipText: 'Projects',
       tooltipPosition: 'right',
       color: 'tertiary',
       selected: currentPage === '/projects'
@@ -45,7 +45,7 @@
     Blog: {
       href: '/blog',
       svg: Quotes,
-      tooltip: 'Blog',
+      tooltipText: 'Blog',
       tooltipPosition: 'right',
       color: 'secondary',
       selected: currentPage === '/blog'
@@ -53,21 +53,21 @@
     GitHub: {
       href: 'https://www.github.com/tophc7',
       svg: GitHub,
-      tooltip: 'GitHub',
+      tooltipText: 'GitHub',
       tooltipPosition: 'right',
       external: true
     },
     LinkedIn: {
       href: 'https://www.linkedin.com/in/tophc7',
       svg: Linkedin,
-      tooltip: 'LinkedIn',
+      tooltipText: 'LinkedIn',
       tooltipPosition: 'right',
       external: true
     },
     Resume: {
       href: '/docs/resume.pdf',
       svg: PDF,
-      tooltip: 'Resume',
+      tooltipText: 'Resume',
       tooltipPosition: 'right'
     }
   };
@@ -83,7 +83,7 @@
   }
 </script>
 
-<aside id="SideNav" class="variant-blur-surface">
+<nav id="SideNav" class="variant-blur-surface">
   <div id="lead">
     <Croissant />
   </div>
@@ -94,14 +94,14 @@
     <hr class="spacer" />
     <NavAnchor {...Anchors.GitHub} />
     <NavAnchor {...Anchors.LinkedIn} />
-    <EmailNavButton />
+    <EmailNavButton tooltipPosition="right" />
     <NavAnchor {...Anchors.Resume} />
   </div>
   <hr class="spacer mt-auto" />
   <div id="trail">
-    <NavButton on:click={onEdit} svg={Pen} tooltip="Live Soon" tooltipPosition="right" color="warning" disabled />
+    <NavButton on:click={onEdit} svg={Pen} tooltipText="Live Soon" tooltipPosition="right" color="warning" disabled />
   </div>
-</aside>
+</nav>
 
 <style lang="postcss">
   #SideNav {
@@ -110,10 +110,10 @@
       @apply aspect-square w-full rounded-base bg-surface-600 p-4;
     }
     & > #inner {
-      @apply flex flex-col gap-4 px-4;
+      @apply flex w-full flex-col gap-4 px-4;
     }
     & > #trail {
-      @apply w-full p-4 pt-0;
+      @apply flex w-full flex-col gap-4 p-4 pt-0;
     }
   }
 
