@@ -1,6 +1,7 @@
+import type { ToastStore } from '@skeletonlabs/skeleton';
 import type { CustomThemeConfig } from '@skeletonlabs/tw-plugin';
 import type Palette from './Palette';
-import type { ToastStore } from '@skeletonlabs/skeleton';
+import { storeTooltip } from './stores';
 
 // FOLDER EXPORTS //
 
@@ -25,6 +26,19 @@ export function copy(node: Node, string: string) {
         node.dispatchEvent(new CustomEvent('copyError'));
       });
   });
+}
+
+/**
+ * Attaches event listeners to a given element to show and hide a tooltip.
+ * @param node - The element to attach the event listeners to.
+ * @param props - The properties of the tooltip to be shown.
+ */
+export function tooltipEvents(node: Element, props: App.TooltipProps) {
+  if (props) {
+    props.anchor = node as HTMLElement;
+    node.addEventListener('mouseenter', () => storeTooltip.trigger(props));
+    node.addEventListener('mouseleave', () => storeTooltip.blur());
+  }
 }
 
 /**
