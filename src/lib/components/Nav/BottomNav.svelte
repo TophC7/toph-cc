@@ -1,8 +1,10 @@
 <script lang="ts">
   import { page } from '$app/stores';
-  import { Code, GitHub, Home, Linkedin, PDF, Quotes } from '$svg';
+  import { Code, Ellipsis, GitHub, Home, Linkedin, PDF, Pen, Quotes } from '$svg';
   import { getToastStore, type ToastSettings } from '@skeletonlabs/skeleton';
+  import EmailNavButton from './EmailNavButton.svelte';
   import NavAnchor from './NavAnchor.svelte';
+  import NavButton from './NavButton.svelte';
 
   const toast = getToastStore();
   $: currentPage = $page.url.pathname;
@@ -51,21 +53,21 @@
       href: 'https://www.github.com/tophc7',
       svg: GitHub,
       tooltipText: 'GitHub',
-      tooltipPosition: 'top',
+      tooltipPosition: 'left',
       external: true
     },
     LinkedIn: {
       href: 'https://www.linkedin.com/in/tophc7',
       svg: Linkedin,
       tooltipText: 'LinkedIn',
-      tooltipPosition: 'top',
+      tooltipPosition: 'left',
       external: true
     },
     Resume: {
       href: '/docs/resume.pdf',
       svg: PDF,
       tooltipText: 'Resume',
-      tooltipPosition: 'top'
+      tooltipPosition: 'left'
     }
   };
 
@@ -79,36 +81,54 @@
     toast.trigger(newToast);
   }
 
-  let navAnchor: HTMLElement;
+  let menuOpen = false;
+  function toggleMenu() {
+    menuOpen = !menuOpen;
+  }
 </script>
 
-<nav id="BottomNav" bind:this={navAnchor}>
-  <div id="bound" class="variant-blur-surface">
-    <div id="lead"></div>
-    <div id="inner"></div>
-    <!-- <hr class="spacer ml-auto" /> -->
-    <div id="trail" class="variant-blur-surface">
-      <NavAnchor {...Anchors.Blog} />
-      <NavAnchor {...Anchors.Projects} />
-      <NavAnchor {...Anchors.Home} />
-    </div>
+<dialog id="menu" class="variant-blur-surface" open={menuOpen}>
+  <div class="flex flex-col gap-2">
+    <NavButton on:click={onEdit} svg={Pen} tooltipText="Live Soon" tooltipPosition="left" color="warning" disabled />
+    <hr class="spacer horizontal" />
+    <NavAnchor {...Anchors.Resume} />
+    <EmailNavButton tooltipPosition="left" />
+    <NavAnchor {...Anchors.LinkedIn} />
+    <NavAnchor {...Anchors.GitHub} />
   </div>
-</nav>
+</dialog>
+
+<div id="BottomNav" class="variant-blur-surface">
+  <div id="lead">
+    <NavAnchor {...Anchors.Blog} />
+    <NavAnchor {...Anchors.Projects} />
+    <NavAnchor {...Anchors.Home} />
+  </div>
+  <hr class="spacer" />
+  <div id="trail">
+    <NavButton on:click={toggleMenu} svg={Ellipsis} color="surface" />
+  </div>
+</div>
 
 <style lang="postcss">
   #BottomNav {
-    @apply fixed bottom-0 left-0 z-50 h-20 max-h-[20] min-h-[20] w-full;
-    & #bound {
-      @apply mt-4 flex h-16 w-full justify-end;
-    }
-    & #lead {
-      @apply flex h-full items-end gap-3 p-3 pl-0;
-    }
-    & #inner {
-      @apply flex h-full items-end gap-3 py-2;
-    }
-    & #trail {
-      @apply flex h-full items-end gap-2 rounded-base rounded-br-none p-2;
+    @apply fixed bottom-0 right-0 z-10 m-2 flex h-16 justify-end rounded-base;
+  }
+
+  #lead,
+  #trail {
+    @apply flex gap-2 p-2;
+  }
+
+  #menu {
+    @apply fixed bottom-[4.5rem] m-2 ml-auto w-16 min-w-[4rem] max-w-[4rem] rounded-base p-2;
+  }
+
+  .spacer {
+    @apply my-auto h-12 w-2 rounded-base bg-surface-500;
+
+    &.horizontal {
+      @apply h-2 w-12;
     }
   }
 </style>

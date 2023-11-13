@@ -31,6 +31,9 @@
   {/if}
   <main class="z-0 h-full w-full max-w-7xl">
     <slot />
+    {#if mobile}
+      <span class="spacer" />
+    {/if}
   </main>
   {#if mobile}
     <BottomNav />
@@ -47,5 +50,9 @@
         display: none; /* Chrome, Safari, Opera */
       }
     }
+  }
+
+  .spacer {
+    @apply block h-16 w-full;
   }
 </style>

@@ -29,7 +29,7 @@
   }
 
   function getPosition() {
-    const distance = '0.5rem';
+    const distance = '0.75em';
     let top, left;
     switch (position) {
       case 'top':
@@ -58,7 +58,7 @@
 
 <style>
   .tooltip {
-    @apply fixed z-[60] m-0 max-w-[8rem] rounded-base p-1 leading-none ring-inset;
+    @apply fixed z-[60] m-0 max-w-[9em] rounded-base p-1 leading-none ring-inset;
     box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);
   }
 </style>

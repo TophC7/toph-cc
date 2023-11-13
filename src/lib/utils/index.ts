@@ -33,11 +33,11 @@ export function copy(node: Node, string: string) {
  * @param node - The element to attach the event listeners to.
  * @param props - The properties of the tooltip to be shown.
  */
-export function tooltip(node: Node, props: App.TooltipProps) {
+export function tooltip(node: Node, props: App.TooltipProps | undefined) {
   if (props) {
     props.anchor = node as HTMLElement;
-    node.addEventListener('mouseenter', () => storeTooltip.trigger(props));
-    node.addEventListener('mouseleave', () => storeTooltip.blur());
+    node.addEventListener('pointerenter', () => storeTooltip.trigger(props));
+    node.addEventListener('pointerleave', () => storeTooltip.blur());
   }
 }
 

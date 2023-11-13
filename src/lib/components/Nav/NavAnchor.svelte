@@ -3,8 +3,8 @@
 
   let SVG: App.SVGC;
   export let href: string;
-  export let tooltipText: string;
-  export let tooltipPosition: App.Position;
+  export let tooltipText: string | undefined;
+  export let tooltipPosition: App.Position | undefined;
   export let color: App.SkeletonColors = 'surface';
   export let selected: boolean = false;
   export let external: boolean = false;
@@ -12,9 +12,9 @@
 
   let colorState: App.SkeletonColors = selected ? color : 'surface';
   let tooltipProps: App.TooltipProps = {
-    text: tooltipText,
     color: colorState,
-    position: tooltipPosition
+    text: tooltipText ?? '',
+    position: tooltipPosition ?? 'bottom'
   };
 
   $: {
@@ -27,6 +27,6 @@
   {href}
   class="btn-icon aspect-square h-full w-full variant-blur-{colorState} rounded-base"
   use:linkOut={external ? href : undefined}
-  use:tooltip={tooltipProps}>
-  <svelte:component this={SVG} height="60%" />
+  use:tooltip={tooltipText ? tooltipProps : undefined}>
+  <svelte:component this={SVG} height="60%" width="60%" />
 </a>
