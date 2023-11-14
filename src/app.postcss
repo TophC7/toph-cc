@@ -21,7 +21,7 @@
 
 html,
 body {
-  @apply m-0 h-full min-h-full overflow-hidden font-Alpino;
+  @apply m-0 font-Alpino;
   background-image: radial-gradient(at 100% 150%, rgba(var(--color-primary-500) / 0.25) 50px, transparent 70%);
   background-attachment: fixed;
   background-position: center;
@@ -31,36 +31,36 @@ body {
 }
 
 .variant-blur-primary {
-  @apply variant-soft-primary backdrop-blur;
+  @apply variant-soft-primary filter backdrop-blur-2xl;
   background-color: rgba(var(--color-primary-500) / var(--base-alpha)) !important;
 }
 
 .variant-blur-secondary {
-  @apply variant-soft-secondary backdrop-blur;
+  @apply variant-soft-secondary filter backdrop-blur-2xl;
   background-color: rgba(var(--color-secondary-500) / var(--base-alpha)) !important;
 }
 
 .variant-blur-tertiary {
-  @apply variant-soft-tertiary backdrop-blur;
+  @apply variant-soft-tertiary filter backdrop-blur-2xl;
   background-color: rgba(var(--color-tertiary-500) / var(--base-alpha)) !important;
 }
 
 .variant-blur-surface {
-  @apply variant-soft-surface backdrop-blur;
+  @apply variant-soft-surface filter backdrop-blur-2xl;
   background-color: rgba(var(--color-surface-500) / var(--base-alpha)) !important;
 }
 
 .variant-blur-warning {
-  @apply variant-soft-warning backdrop-blur;
+  @apply variant-soft-warning filter backdrop-blur-2xl;
   background-color: rgba(var(--color-warning-500) / var(--base-alpha)) !important;
 }
 
 .variant-blur-success {
-  @apply variant-soft-success backdrop-blur;
+  @apply variant-soft-success filter backdrop-blur-2xl;
   background-color: rgba(var(--color-success-500) / var(--base-alpha)) !important;
 }
 
 .variant-blur-error {
-  @apply variant-soft-error backdrop-blur;
+  @apply variant-soft-error filter backdrop-blur-2xl;
   background-color: rgba(var(--color-error-500) / var(--base-alpha));
 }

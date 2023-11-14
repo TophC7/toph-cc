@@ -105,7 +105,8 @@
 
 <style lang="postcss">
   #SideNav {
-    @apply sticky left-0 top-0 z-50 flex h-full w-20 min-w-[20] max-w-[20] flex-col items-center gap-4 rounded-base;
+    @apply sticky left-0 top-4 z-10 flex min-h-max w-20 min-w-[5rem] max-w-[5rem] flex-col items-center gap-4 rounded-base;
+    height: calc(100vh - 2rem);
     & > #lead {
       @apply aspect-square w-full rounded-base bg-surface-600 p-4;
     }
@@ -118,6 +119,6 @@
   }
 
   .spacer {
-    @apply h-2 w-12 rounded-base bg-surface-500;
+    @apply h-2 min-h-[0.5rem] w-12 rounded-base bg-surface-500;
   }
 </style>

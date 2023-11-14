@@ -60,7 +60,7 @@
   <meta name="description" content="My Portfolio" />
 </svelte:head>
 
-<section>
+<section class="pb-4">
   <div>
     <h1
       class="glow max-w-4xl pb-4 text-4xl font-bold leading-snug text-primary-500 transition-all ease-linear xl:text-5xl">
@@ -88,7 +88,7 @@
 
 <style lang="postcss">
   section {
-    @apply flex flex-col gap-4 pb-4 text-base transition-all ease-linear;
+    @apply flex flex-col gap-4 text-base transition-all ease-linear;
     @screen xl {
       @apply text-xl;
     }

@@ -1,10 +1,8 @@
 <script lang="ts">
   import { page } from '$app/stores';
-  import { Code, Ellipsis, GitHub, Home, Linkedin, PDF, Pen, Quotes } from '$svg';
+  import { Code, Envelope, GitHub, Home, Linkedin, PDF, Quotes } from '$svg';
   import { getToastStore, type ToastSettings } from '@skeletonlabs/skeleton';
-  import EmailNavButton from './EmailNavButton.svelte';
   import NavAnchor from './NavAnchor.svelte';
-  import NavButton from './NavButton.svelte';
 
   const toast = getToastStore();
   $: currentPage = $page.url.pathname;
@@ -53,21 +51,21 @@
       href: 'https://www.github.com/tophc7',
       svg: GitHub,
       tooltipText: 'GitHub',
-      tooltipPosition: 'left',
+      tooltipPosition: 'top',
       external: true
     },
     LinkedIn: {
       href: 'https://www.linkedin.com/in/tophc7',
       svg: Linkedin,
       tooltipText: 'LinkedIn',
-      tooltipPosition: 'left',
+      tooltipPosition: 'top',
       external: true
     },
     Resume: {
       href: '/docs/resume.pdf',
       svg: PDF,
       tooltipText: 'Resume',
-      tooltipPosition: 'left'
+      tooltipPosition: 'top'
     }
   };
 
@@ -81,83 +79,56 @@
     toast.trigger(newToast);
   }
 
-  let show: boolean = true;
-  let y: number = 0;
-  let scrollY: number;
-
-  $: {
-    if (scrollY < y) {
-      show = true;
-    } else {
-      menuOpen = false;
-      show = false;
-    }
-    y = scrollY;
-  }
-
-  let menuOpen = false;
-  function toggleMenu() {
-    menuOpen = !menuOpen;
-  }
+  let navAnchor: HTMLElement;
 </script>
 
-<svelte:window bind:scrollY />
-
-<div id="BottomNav-wrapper" class:bottom-4={show} class:bottom-[-5rem]={!show}>
-  <dialog id="menu" class="variant-blur-surface" open={menuOpen}>
-    <div class="flex flex-col gap-2">
-      <NavButton on:click={onEdit} svg={Pen} tooltipText="Live Soon" tooltipPosition="left" color="warning" disabled />
-      <hr class="spacer horizontal" />
-      <NavAnchor {...Anchors.Resume} />
-      <EmailNavButton tooltipPosition="left" />
-      <NavAnchor {...Anchors.LinkedIn} />
-      <NavAnchor {...Anchors.GitHub} />
-    </div>
-  </dialog>
-
-  <nav id="BottomNav" class="variant-blur-surface">
-    <div id="lead">
-      <NavAnchor {...Anchors.Home} />
-      <NavAnchor {...Anchors.Projects} />
+<nav id="BottomNav" class="variant-blur-surface" bind:this={navAnchor}>
+  <div id="bound">
+    <div id="lead"></div>
+    <div id="trail" class="variant-blur-surface">
       <NavAnchor {...Anchors.Blog} />
+      <NavAnchor {...Anchors.Projects} />
+      <NavAnchor {...Anchors.Home} />
     </div>
-    <div id="trail">
-      <NavButton on:click={toggleMenu} svg={Ellipsis} color="surface" />
-    </div>
-  </nav>
-</div>
+  </div>
+  <div id="drawer" class="logo-cloud grid-cols-1 gap-1">
+    <a class="variant-blur-surface logo-item rounded-base" href="/">
+      <i class="logo"><GitHub /></i>
+      <span>GitHub</span>
+    </a>
+    <a class="variant-blur-surface logo-item rounded-base" href="/">
+      <i class="logo"><Linkedin /></i>
+      <span>LinkedIn</span>
+    </a>
+    <a class="variant-blur-surface logo-item rounded-base" href="/">
+      <i class="logo"><Envelope /></i>
+      <span>Email</span>
+    </a>
+    <a class="variant-blur-surface logo-item rounded-base" href="/">
+      <i class="logo"><PDF /></i>
+      <span>Resume</span>
+    </a>
+  </div>
+</nav>
 
 <style lang="postcss">
-  #BottomNav-wrapper {
-    @apply fixed z-10;
-    left: calc(50%);
-    transform: translateX(-50%);
-  }
-
   #BottomNav {
-    @apply flex h-16 justify-end rounded-base;
-    width: calc(100vw - 3rem);
+    @apply fixed bottom-0 left-0 z-10 w-full rounded-base rounded-b-none;
   }
-
-  #lead,
-  #trail {
-    @apply flex gap-2 p-2;
+  #bound {
+    @apply flex h-16 justify-end;
   }
-
+  #drawer {
+    @apply p-1;
+  }
   #lead {
-    @apply mr-auto;
+    @apply flex gap-3 p-3;
+  }
+  #trail {
+    @apply flex gap-2 rounded-base p-2;
   }
 
-  #menu {
-    @apply absolute bottom-[4.5rem] left-full m-0 w-16 min-w-[4rem] max-w-[4rem] rounded-base p-2;
-    transform: translateX(-100%);
-  }
-
-  .spacer {
-    @apply my-auto h-12 w-2 rounded-base bg-surface-500;
-
-    &.horizontal {
-      @apply h-2 w-12;
-    }
+  .logo {
+    @apply badge-icon;
   }
 </style>
