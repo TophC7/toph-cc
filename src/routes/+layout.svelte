@@ -29,7 +29,7 @@
   {#if !mobile && innerWidth !== undefined}
     <SideNav />
   {/if}
-  <main class="z-0">
+  <main class="z-0 w-full">
     <slot />
   </main>
   {#if mobile}

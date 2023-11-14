@@ -83,10 +83,10 @@
 
   let show: boolean = true;
   let y: number = 0;
-  let scrollY: number;
+  let scrollY: number = 0;
 
   $: {
-    if (scrollY < y) {
+    if (scrollY <= y) {
       show = true;
     } else {
       menuOpen = false;
