@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "type": "module",
   "engines": {
-    "node": ">=18"
+    "node": "18.x"
   },
   "scripts": {
     "build": "vite build",
