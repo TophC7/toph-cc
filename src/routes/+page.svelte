@@ -1,7 +1,18 @@
 <script lang="ts">
   import { ArrayFormat, Project } from '$lib/components';
 
-  const techs = ['Fhir', 'Keycloak', 'Spring', 'Next.js', 'Svelte', 'Tailwind', 'Docker', 'Google Cloud'];
+  const techs = [
+    'React',
+    'TailwindCSS',
+    'Next.js',
+    'Svelte',
+    'Docker',
+    'Spring',
+    'AWS',
+    'Google Cloud',
+    'Firebase',
+    'SQL'
+  ];
 
   // TODO: fetch from api in the future
   const cesarAmaroLink = `<a href="https://www.cesaramaro.co" target="_blank" rel="noopener noreferrer">@CesarAmaro</a>`;
@@ -67,14 +78,23 @@
       I'm Chris, a Software Engineer and Web Developer
     </h1>
     <p class="max-w-5xl">
-      At the moment, I am working as a developer for
-      <a class="font-medium text-warning-500 underline" href="https://nicheaim.com/">NicheAim Technologies</a>
-      with Full-Stack projects related to FHIR and Healthcare gaining valuable experience to become the
+      At the moment, I'm studying at
+      <a class="font-medium text-warning-500 underline" href="https://www.vcu.edu/">Virginia Commonwealth University</a>
+      and interning at <a class="font-medium text-primary-500 underline" href="https://it4causes.org/">IT4Causes</a>.
+      I'm really into tech and always on the lookout for new ways to learn and grow. I've got some great experience
+      working as a Full-Stack Developer with <span class="font-medium text-error-500">Java</span> and
+      <span class="font-medium text-secondary-500">TypeScript</span>, and I'm excited to find my next step in the field
+      to become the <span class="fable font-medium"> fabled 10x Dev</span>. I work with a bunch of different
+      technologies, but some of my go-tos are <ArrayFormat array={techs} />. Feel free to poke around my site, get to
+      know me, and check out my projects!
+      <!-- I have worked with
+      <a class="font-medium text-secondary-500 underline" href="https://nicheaim.com/">NicheAim Technologies</a>
+      as a Full-Stack Developer in FHIR and Healthcare gaining valuable experience to become the
       <span class="fable font-medium"> fabled 10x Dev</span>. My core languages are
       <span class="font-medium text-error-500">Java</span> and
       <span class="font-medium text-secondary-500">TypeScript</span> and some technologies I work with are <ArrayFormat
         array={techs} /> but I work with other techs all the time and love learning new ones. You're invited to browse around
-      my site, learn more about me, and see my projects!
+      my site, learn more about me, and see my projects! -->
     </p>
   </div>
 </section>
