@@ -1,0 +1,108 @@
+@import '@fontsource-variable/lexend';
+@import 'tailwindcss';
+@source '../src';
+
+@theme {
+  --color-ground: #131313;
+  --color-surface: #201c1a;
+  --color-raised: #2b2522;
+  --color-overlay: #39312d;
+  --color-edge: #3a322e;
+  --color-edge-strong: #514640;
+  --color-fg: #e2dedb;
+  --color-muted: #a59c99;
+  --color-subtle: #706967;
+  --color-bright: #fff3ef;
+  --color-accent: #ffb59f;
+  --color-accent-bright: #ffcbbb;
+  --color-mint: #98ffcf;
+  --color-sky: #9ecbff;
+  --font-sans: 'Lexend Variable', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-mono: 'SF Mono', 'Cascadia Code', 'JetBrains Mono', monospace;
+  --ease-default: cubic-bezier(0.2, 0, 0, 1);
+}
+
+@layer base {
+  :root {
+    color-scheme: dark;
+    background: var(--color-ground);
+  }
+
+  body {
+    margin: 0;
+    min-width: 320px;
+    background: var(--color-ground);
+    font-family: var(--font-sans);
+    color: var(--color-fg);
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  a {
+    color: inherit;
+  }
+
+  ::selection {
+    background: rgba(255, 181, 159, 0.24);
+    color: var(--color-bright);
+  }
+}
+
+@layer components {
+  .portfolio-particles {
+    pointer-events: none;
+    z-index: 0;
+    opacity: 0.5;
+    mask-image: radial-gradient(circle at 50% 45%, black 0%, black 54%, transparent 92%);
+  }
+
+  .pastel-rainbow-badge {
+    color: var(--color-muted);
+  }
+
+  .pastel-rainbow-text {
+    background: linear-gradient(110deg, #ffb59f, #ffcbbb, #b7ffa5, #9ecbff, #ffb59f);
+    background-size: 260% 260%;
+    background-clip: text;
+    color: transparent;
+    font-weight: 600;
+    animation: pastel-rainbow-drift 16s var(--ease-default) infinite;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .pastel-rainbow-badge svg {
+    color: var(--color-accent-bright);
+  }
+
+  .copy-email-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    color: inherit;
+    cursor: pointer;
+  }
+
+  .copy-email-button[data-copied='true'] {
+    color: var(--color-accent);
+  }
+
+  @keyframes pastel-rainbow-drift {
+    0%,
+    100% {
+      background-position: 0% 50%;
+    }
+
+    50% {
+      background-position: 100% 50%;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .pastel-rainbow-text {
+      animation: none;
+    }
+  }
+}

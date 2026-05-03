@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 96" role="img" aria-labelledby="title">
+  <title id="title">Toph mark</title>
+  <rect width="96" height="96" rx="18" fill="#201c1a" />
+  <path d="M20 24h56v12H54v36H42V36H20V24Z" fill="#fff3ef" />
+  <path d="M19 76h58v6H19v-6Z" fill="#ffb59f" />
+</svg>

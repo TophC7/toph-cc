@@ -1,0 +1,12 @@
+.DS_Store
+.direnv/
+.env
+.env.*
+!.env.example
+.svelte-kit/
+.vercel/
+.vite/
+build/
+node_modules/
+result
+result-*
