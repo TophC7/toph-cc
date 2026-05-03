@@ -10,4 +10,6 @@ Personal portfolio site.
 - Tailwind CSS
 - Bun
 - Nix
-- Cloudflare Pages
+- Cloudflare Workers Static Assets
+
+Static SvelteKit portfolio built with `@sveltejs/adapter-static` and deployed from `build/`.
